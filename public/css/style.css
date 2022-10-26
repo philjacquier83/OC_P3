@@ -10,11 +10,12 @@ header {
   z-index: 100;
   display: flex;
   justify-content: center;
-  padding: 40px;
-  box-shadow: 0 4px 2px #636363;
+  padding: 20px;
+  box-shadow: 0 4px 2px #303030;
 }
 header img {
-  width: 50%;
+  width: 80%;
+  max-width: 400px;
 }
 
 main nav {
@@ -24,6 +25,30 @@ main nav {
   display: flex;
   justify-content: center;
   padding: 20px;
+  font-size: 18px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.btnBack,
+.btnNext {
+  display: flex;
+  justify-content: center;
+  width: 40px;
+  height: 100%;
+  align-items: center;
+  font-size: 24px;
+}
+
+.logo {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .presentation {
@@ -59,7 +84,7 @@ input[type=button] {
   background: -webkit-linear-gradient(top, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
   color: #fff;
   font-family: "Roboto";
-  box-shadow: 2px 2px 8px #782cd3;
+  box-shadow: 2px 2px 8px #481a7f;
 }
 
 .fonctionnement {
@@ -87,7 +112,7 @@ input[type=button] {
   padding: 20px;
   border-radius: 20px;
   margin-top: 20px;
-  box-shadow: 2px 2px 8px #d2d2d2;
+  box-shadow: 2px 2px 8px #9f9f9f;
 }
 .fct-etape div {
   float: left;
@@ -148,7 +173,7 @@ i:hover {
   height: 220px;
   border-radius: 20px;
   margin-bottom: 20px;
-  box-shadow: 2px 2px 8px #d2d2d2;
+  box-shadow: 2px 2px 8px #9f9f9f;
 }
 .vignette:last-child {
   margin-bottom: 0;
@@ -162,6 +187,13 @@ i:hover {
   object-fit: cover;
   object-position: center;
   border-radius: 20px 20px 0 0;
+}
+.vignette:hover {
+  background: #e4d5f6;
+  box-shadow: 2px 2px 8px #481a7f;
+}
+.vignette:hover .descVignette {
+  color: #9356DC;
 }
 
 .descVignette {
@@ -220,6 +252,16 @@ i:hover {
   font-size: 24px;
 }
 
+.bgRestaurant {
+  height: 240px;
+}
+.bgRestaurant img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
 .menus {
   display: flex;
   flex-direction: column;
@@ -234,7 +276,7 @@ i:hover {
   display: flex;
   flex-direction: column;
   margin-top: 20px;
-  box-shadow: 2px 2px 8px #d2d2d2;
+  box-shadow: 2px 2px 8px #9f9f9f;
 }
 .liste_menus .nomPlat {
   flex: 1;
@@ -250,6 +292,16 @@ i:hover {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+.liste_menus .desc_prix_plat .prixPlat {
+  font-weight: bolder;
+}
+
+.separator {
+  height: 3px;
+  width: 40px;
+  margin-top: 5px;
+  background: #99E2D0;
 }
 
 .blocNom-Coeur {
@@ -267,7 +319,7 @@ i:hover {
   background: -webkit-linear-gradient(top, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
   color: #fff;
   font-family: "Roboto";
-  box-shadow: 2px 2px 8px #782cd3;
+  box-shadow: 2px 2px 8px #481a7f;
 }
 
 footer {
@@ -283,6 +335,9 @@ footer p {
 }
 footer div {
   padding: 5px 0;
+}
+footer a {
+  color: #fff;
 }
 footer .fa-solid {
   width: 20px;
