@@ -1,0 +1,299 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto";
+}
+
+header {
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+  box-shadow: 0 4px 2px #636363;
+}
+header img {
+  width: 50%;
+}
+
+main nav {
+  font-family: "Roboto";
+  font-weight: 700;
+  background: rgb(230, 230, 230);
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.presentation {
+  display: flex;
+  flex-direction: column;
+  background: rgb(248, 248, 248);
+  padding: 60px 20px;
+  text-align: center;
+  font-family: "Roboto";
+}
+
+.titrePresentation {
+  font-family: "Roboto";
+  font-weight: bolder;
+  margin: 0 0 20px 0;
+  font-size: 24px;
+}
+
+.sloganPresentation {
+  font-size: 16px;
+  font-weight: 300;
+  margin: 0 0 30px 0;
+}
+
+.buttonPresentation {
+  font-weight: 400;
+}
+
+input[type=button] {
+  border-radius: 20px;
+  border: none;
+  padding: 15px 20px;
+  background: -webkit-linear-gradient(top, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
+  color: #fff;
+  font-family: "Roboto";
+  box-shadow: 2px 2px 8px #782cd3;
+}
+
+.fonctionnement {
+  display: flex;
+  flex-direction: column;
+  padding: 60px 0;
+  background: #fff;
+}
+.fonctionnement .titreFonctionnement {
+  font-size: 24px;
+  font-weight: 700;
+  padding: 0 20px 0 15px;
+  margin-top: 0;
+}
+
+.liste-etapes {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0;
+  padding: 0 20px 0 25px;
+}
+
+.fct-etape {
+  background: rgb(245, 245, 245);
+  padding: 20px;
+  border-radius: 20px;
+  margin-top: 20px;
+  box-shadow: 2px 2px 8px #d2d2d2;
+}
+.fct-etape div {
+  float: left;
+  margin-right: -10px;
+}
+.fct-etape:hover {
+  background: #f2eafb;
+}
+.fct-etape:hover i {
+  color: #782cd3;
+}
+
+.no-etape {
+  background: #9356DC;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  position: relative;
+  left: -30px;
+  font-size: 12px;
+}
+
+i {
+  margin-right: 15px;
+}
+i:hover {
+  color: #9356DC;
+}
+
+.restaurants {
+  display: flex;
+  flex-direction: column;
+  padding: 60px 0;
+  background: rgb(248, 248, 248);
+}
+.restaurants .titreRestaurants {
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 0;
+  padding: 0 20px 0 15px;
+}
+
+.vignettesRestos {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0;
+  padding: 0 20px 0 25px;
+}
+
+.vignette {
+  width: 100%;
+  height: 220px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  box-shadow: 2px 2px 8px #d2d2d2;
+}
+.vignette:last-child {
+  margin-bottom: 0;
+}
+.vignette .imgVignette {
+  height: 140px;
+}
+.vignette img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 20px 20px 0 0;
+}
+
+.descVignette {
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 10px;
+  height: 80px;
+}
+
+.restaurant {
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  flex: 1;
+}
+.restaurant .nomRestaurant {
+  font-weight: bolder;
+  padding: 3px;
+}
+.restaurant .lieuRestaurant {
+  font-weight: lighter;
+  padding: 3px;
+}
+
+.heartVignette {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+.heartVignette:hover {
+  cursor: pointer;
+}
+
+.infosRestaurant {
+  width: 100%;
+  background: rgb(245, 245, 245);
+}
+.infosRestaurant img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.menuRestaurant {
+  padding: 20px 15px;
+  border-radius: 40px 40px 0 0;
+  position: relative;
+  top: -60px;
+  background: rgb(245, 245, 245);
+}
+.menuRestaurant .nomRestaurant {
+  font-family: "Shrikhand";
+  display: flex;
+  flex: 1;
+  font-size: 24px;
+}
+
+.menus {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.liste_menus {
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  box-shadow: 2px 2px 8px #d2d2d2;
+}
+.liste_menus .nomPlat {
+  flex: 1;
+  padding: 5px 0;
+  font-weight: bolder;
+}
+.liste_menus .desc_prix_plat {
+  display: flex;
+}
+.liste_menus .desc_prix_plat .descPlat {
+  flex: 1;
+  margin-right: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.blocNom-Coeur {
+  display: flex;
+}
+
+.buttonCommand {
+  display: flex;
+  justify-content: center;
+}
+.buttonCommand input[type=button] {
+  border-radius: 20px;
+  border: none;
+  padding: 15px 60px;
+  background: -webkit-linear-gradient(top, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
+  color: #fff;
+  font-family: "Roboto";
+  box-shadow: 2px 2px 8px #782cd3;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  background: rgb(59, 59, 59);
+  color: #fff;
+  padding: 30px;
+}
+footer p {
+  padding: 0;
+  margin-top: 0;
+}
+footer div {
+  padding: 5px 0;
+}
+footer .fa-solid {
+  width: 20px;
+  margin-right: 10px;
+}
+
+.titreFooter {
+  font-family: "Shrikhand";
+  color: #fff;
+  font-style: italic;
+  font-size: 20px;
+}
+
+/*# sourceMappingURL=style.css.map */
