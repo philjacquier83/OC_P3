@@ -1,0 +1,46 @@
+footer {
+    display: flex;
+    flex-direction: column;
+    background: map-get($backgrounds, lightblack);
+    color: map-get($colors, white);
+    padding: 30px;
+    
+    nav {
+        @include media-desktop {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 1200px;
+            margin:auto;
+        }
+    }
+
+    p {
+        padding: 0;
+        margin-top: 0;
+        margin-bottom: 20px;
+        @include media-desktop {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto 20px auto;
+        }
+    }
+
+    div {
+        padding: 5px 0;
+        opacity: 0.4;
+        &:hover {
+            opacity: 1;
+            cursor: pointer;
+        }
+    }
+
+    a {
+        color: #fff;
+    }
+
+    .fa-solid {
+        width: 20px;
+        margin-right: 10px;
+    }
+}

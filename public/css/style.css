@@ -6,41 +6,9 @@ body {
   font-family: "Roboto";
 }
 
-header {
-  z-index: 100;
-  display: flex;
-  justify-content: center;
-  padding: 20px;
-  box-shadow: 0 4px 2px #303030;
-}
-header img {
-  width: 80%;
-  max-width: 400px;
-}
-
-main nav {
-  font-family: "Roboto";
-  font-weight: 700;
-  background: rgb(230, 230, 230);
-  display: flex;
-  justify-content: center;
-  padding: 20px;
-  font-size: 18px;
-}
-
 a {
   color: black;
   text-decoration: none;
-}
-
-.btnBack,
-.btnNext {
-  display: flex;
-  justify-content: center;
-  width: 40px;
-  height: 100%;
-  align-items: center;
-  font-size: 24px;
 }
 
 .logo {
@@ -73,25 +41,17 @@ a {
   margin: 0 0 30px 0;
 }
 
-.buttonPresentation {
-  font-weight: 400;
-}
-
-input[type=button] {
-  border-radius: 20px;
-  border: none;
-  padding: 15px 20px;
-  background: -webkit-linear-gradient(top, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
-  color: #fff;
-  font-family: "Roboto";
-  box-shadow: 2px 2px 8px #481a7f;
-}
-
 .fonctionnement {
   display: flex;
   flex-direction: column;
   padding: 60px 0;
   background: #fff;
+}
+@media screen and (min-width: 1024px) {
+  .fonctionnement {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 }
 .fonctionnement .titreFonctionnement {
   font-size: 24px;
@@ -106,6 +66,12 @@ input[type=button] {
   margin-top: 0;
   padding: 0 20px 0 25px;
 }
+@media screen and (min-width: 1024px) {
+  .liste-etapes {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
 
 .fct-etape {
   background: rgb(245, 245, 245);
@@ -113,6 +79,11 @@ input[type=button] {
   border-radius: 20px;
   margin-top: 20px;
   box-shadow: 2px 2px 8px #9f9f9f;
+}
+@media screen and (min-width: 1024px) {
+  .fct-etape {
+    padding: 20px 40px;
+  }
 }
 .fct-etape div {
   float: left;
@@ -140,6 +111,14 @@ input[type=button] {
   left: -30px;
   font-size: 12px;
 }
+@media screen and (min-width: 1024px) {
+  .no-etape {
+    margin-left: -10px;
+    left: 50%;
+    margin-top: -10px;
+    top: -100%;
+  }
+}
 
 i {
   margin-right: 15px;
@@ -160,26 +139,55 @@ i:hover {
   margin-top: 0;
   padding: 0 20px 0 15px;
 }
+@media screen and (min-width: 1024px) {
+  .restaurants .titreRestaurants {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
 
 .vignettesRestos {
   display: flex;
   flex-direction: column;
-  margin-top: 0;
-  padding: 0 20px 0 25px;
+  margin-top: 10px;
+  padding: 0 20px;
+}
+@media screen and (min-width: 1024px) {
+  .vignettesRestos {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 30px auto 0 auto;
+  }
 }
 
 .vignette {
   width: 100%;
   height: 220px;
   border-radius: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   box-shadow: 2px 2px 8px #9f9f9f;
+}
+@media screen and (min-width: 1024px) {
+  .vignette {
+    width: 45%;
+    height: 300px;
+    margin-bottom: 60px;
+  }
 }
 .vignette:last-child {
   margin-bottom: 0;
 }
 .vignette .imgVignette {
   height: 140px;
+}
+@media screen and (min-width: 1024px) {
+  .vignette .imgVignette {
+    height: 200px;
+  }
 }
 .vignette img {
   width: 100%;
@@ -202,10 +210,16 @@ i:hover {
   padding: 10px;
   height: 80px;
 }
+@media screen and (min-width: 1024px) {
+  .descVignette {
+    height: 100px;
+  }
+}
 
 .restaurant {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   font-size: 18px;
   flex: 1;
 }
@@ -224,8 +238,20 @@ i:hover {
   align-items: center;
   font-size: 24px;
 }
-.heartVignette:hover {
+@media screen and (min-width: 1024px) {
+  .heartVignette {
+    font-size: 5vh;
+  }
+}
+.heartVignette i {
+  display: inline-block;
+  transition: all 200ms;
+  background-color: none;
+}
+.heartVignette i:hover {
+  display: inline-block;
   cursor: pointer;
+  background-color: -webkit-linear-gradient(top, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
 }
 
 .infosRestaurant {
@@ -251,9 +277,19 @@ i:hover {
   flex: 1;
   font-size: 24px;
 }
+@media screen and (min-width: 1024px) {
+  .menuRestaurant .nomRestaurant {
+    font-size: 5vh;
+  }
+}
 
 .bgRestaurant {
   height: 240px;
+}
+@media screen and (min-width: 1024px) {
+  .bgRestaurant {
+    height: 360px;
+  }
 }
 .bgRestaurant img {
   width: 100%;
@@ -262,11 +298,38 @@ i:hover {
   object-position: center;
 }
 
+.listePlats {
+  padding: 0;
+  margin: 0;
+}
+@media screen and (min-width: 1024px) {
+  .listePlats {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+.listePlats .entrees, .listePlats .plats, .listePlats .desserts {
+  width: 32%;
+  background-color: rgb(245, 245, 245);
+  padding: 20px 8px;
+  border-radius: 10px;
+}
+
 .menus {
   display: flex;
   flex-direction: column;
   margin-top: 20px;
   margin-bottom: 40px;
+}
+@media screen and (min-width: 1024px) {
+  .menus {
+    margin: 0;
+    font-size: 2vh;
+    text-align: center;
+  }
 }
 
 .liste_menus {
@@ -277,6 +340,11 @@ i:hover {
   flex-direction: column;
   margin-top: 20px;
   box-shadow: 2px 2px 8px #9f9f9f;
+}
+@media screen and (min-width: 1024px) {
+  .liste_menus {
+    text-align: left;
+  }
 }
 .liste_menus .nomPlat {
   flex: 1;
@@ -303,14 +371,57 @@ i:hover {
   margin-top: 5px;
   background: #99E2D0;
 }
+@media screen and (min-width: 1024px) {
+  .separator {
+    margin: 0 auto;
+  }
+}
 
 .blocNom-Coeur {
   display: flex;
+}
+@media screen and (min-width: 1024px) {
+  .blocNom-Coeur {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+.titreFooter {
+  font-family: "Shrikhand";
+  color: #fff;
+  font-style: italic;
+  font-size: 20px;
+}
+
+.btnBack,
+.btnNext {
+  display: flex;
+  justify-content: center;
+  width: 40px;
+  height: 100%;
+  align-items: center;
+  font-size: 24px;
+}
+@media screen and (min-width: 1024px) {
+  .btnBack,
+.btnNext {
+    font-size: 4vh;
+  }
+}
+
+.buttonPresentation {
+  font-weight: 400;
 }
 
 .buttonCommand {
   display: flex;
   justify-content: center;
+}
+@media screen and (min-width: 1024px) {
+  .buttonCommand {
+    margin-top: 60px;
+  }
 }
 .buttonCommand input[type=button] {
   border-radius: 20px;
@@ -320,6 +431,47 @@ i:hover {
   color: #fff;
   font-family: "Roboto";
   box-shadow: 2px 2px 8px #481a7f;
+  transition: all 400ms;
+}
+.buttonCommand input[type=button]:hover {
+  background: #e4d5f6;
+  color: #9356DC;
+}
+
+input[type=button] {
+  border-radius: 20px;
+  border: none;
+  padding: 15px 20px;
+  background: -webkit-linear-gradient(top, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
+  color: #fff;
+  font-family: "Roboto";
+  box-shadow: 2px 2px 8px #481a7f;
+}
+
+header {
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  box-shadow: 0 4px 2px #303030;
+}
+header img {
+  width: 80%;
+  max-width: 400px;
+}
+
+main {
+  width: 100%;
+}
+
+main nav {
+  font-family: "Roboto";
+  font-weight: 700;
+  background: rgb(230, 230, 230);
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  font-size: 18px;
 }
 
 footer {
@@ -329,12 +481,34 @@ footer {
   color: #fff;
   padding: 30px;
 }
+@media screen and (min-width: 1024px) {
+  footer nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+  }
+}
 footer p {
   padding: 0;
   margin-top: 0;
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 1024px) {
+  footer p {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 20px auto;
+  }
 }
 footer div {
   padding: 5px 0;
+  opacity: 0.4;
+}
+footer div:hover {
+  opacity: 1;
+  cursor: pointer;
 }
 footer a {
   color: #fff;
@@ -342,13 +516,6 @@ footer a {
 footer .fa-solid {
   width: 20px;
   margin-right: 10px;
-}
-
-.titreFooter {
-  font-family: "Shrikhand";
-  color: #fff;
-  font-style: italic;
-  font-size: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */

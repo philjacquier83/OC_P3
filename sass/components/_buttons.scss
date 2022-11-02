@@ -1,0 +1,44 @@
+.btnBack,
+.btnNext {
+    display: flex;
+    justify-content: center;
+    width: 40px;
+    height: 100%;
+    align-items: center;
+    font-size: 24px;
+    @include media-desktop {
+        font-size:4vh;
+    }
+}
+
+.buttonPresentation {
+    font-weight: 400;
+}
+
+.buttonCommand {
+    display: flex;
+    justify-content: center;
+    @include media-desktop {
+        margin-top: 60px;
+    }
+    input[type=button] {
+        border-radius: 20px;
+        border: none;
+        padding: 15px 60px;
+        @include btns(active);
+        @include shadows(primary-shadow);
+        transition: all 400ms;
+        &:hover {
+            background: lighten(map-get($colors, primary), 30%);
+            color: map-get($colors, primary);
+        }
+    }
+}
+
+input[type=button] {
+    border-radius: 20px;
+    border: none;
+    padding: 15px 20px;
+    @include btns(active);
+    @include shadows(primary-shadow);
+}

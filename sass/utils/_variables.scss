@@ -1,0 +1,56 @@
+$fonts: (
+    logo:"Shrikhand",
+    titre:"Shrikhand",
+    textes: "Roboto"
+);
+$backgrounds: (
+    white: #fff,
+    lightergrey: rgb(248, 248, 248),
+    normallightgrey: rgb(245, 245, 245),
+    darkergrey: rgb(230, 230, 230),
+    lightblack: rgb(59, 59, 59)
+);
+$colors: (
+    primary:#9356DC,
+    secondary:#FF79DA,
+    tertiary:#99E2D0,
+    inactive-btn: rgb(235, 235, 235),
+    darkcolor:rgb(124, 124, 124),
+    white: #fff,
+    gradient:-webkit-linear-gradient(top, rgba(255, 121, 218, 1) 0%, rgba(147, 86, 220, 1) 100%)
+);
+$btns: (
+    active: (bg: -webkit-linear-gradient(top, rgba(255, 121, 218, 1) 0%, rgba(147, 86, 220, 1) 100%),
+        ff: map-get($fonts, textes),
+        txt:#fff),
+    focus: (bg: map-get($colors, primary),
+        ff: map-get($fonts, textes),
+        txt:#fff),
+    invalid: (bg: map-get($colors, primary),
+        ff: map-get($fonts, textes),
+        txt:#fff)
+);
+
+$shadows: (
+    primary-shadow: (size1: 2px,
+        size2: 2px,
+        size3: 8px,
+        shdw: map-get($colors, primary)),
+    tertiary-shadow: (size1: 2px,
+        size2: 2px,
+        size3: 8px,
+        shdw: map-get($colors, tertiary)),
+    button-shadow: (size1: 2px,
+        size2: 2px,
+        size3: 8px,
+        shdw: map-get($colors, inactive-btn)),
+    nav-shadow: (size1:0,
+        size2: 4px,
+        size3: 2px,
+        shdw: map-get($colors, darkcolor))
+);
+
+$breakpoints: (
+    tablet: 768px,
+    desktop: 1024px
+);

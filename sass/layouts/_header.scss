@@ -1,0 +1,12 @@
+header {
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    @include shadows(nav-shadow);
+
+    img {
+        width: 80%;
+        max-width: 400px;
+    }
+}

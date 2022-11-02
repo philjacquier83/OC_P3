@@ -1,0 +1,23 @@
+@mixin media-tablet {
+    @media screen and (min-width: map-get($breakpoints, tablet)) {
+        @content;
+    }
+}
+
+@mixin media-desktop {
+    @media screen and (min-width: map-get($breakpoints, desktop)) {
+        @content;
+    }
+}
+
+@mixin btns($state) {
+    $palette_btns: map-get($btns, $state);
+    background: map-get($palette_btns, bg);
+    color: map-get($palette_btns, txt);
+    font-family: map-get($palette_btns, ff);
+}
+
+@mixin shadows($degree) {
+    $shadows: map-get($shadows, $degree);
+    box-shadow: map-get($shadows, size1) map-get($shadows, size2) map-get($shadows, size3) darken(map-get($shadows, shdw), 30%);
+}
