@@ -1,0 +1,21 @@
+.presentation {
+    display: flex;
+    flex-direction: column;
+    background: map-get($backgrounds, lightergrey);
+    padding: 60px 20px;
+    text-align: center;
+    font-family: map-get($fonts, textes);
+}
+
+.titrePresentation {
+    font-family: map-get($fonts, textes);
+    font-weight: bolder;
+    margin: 0 0 20px 0;
+    font-size: 24px;
+}
+
+.sloganPresentation {
+    font-size: 16px;
+    font-weight: 300;
+    margin: 0 0 30px 0;
+}

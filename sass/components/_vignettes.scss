@@ -1,0 +1,110 @@
+.vignette {
+    width: 100%;
+    height: 220px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+
+    @include media-desktop {
+        width: 45%;
+        height: 300px;
+        margin-bottom: 60px;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    @include shadows(button-shadow);
+
+    .imgVignette {
+        height: 140px;
+
+        @include media-desktop {
+            height: 200px;
+        }
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 20px 20px 0 0;
+    }
+
+    &:hover {
+        background: lighten(map-get($colors, primary), 30%);
+        @include shadows(primary-shadow);
+
+        .descVignette {
+            color: map-get($colors, primary);
+        }
+    }
+}
+
+.descVignette {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 10px;
+    height: 80px;
+
+    @include media-desktop {
+        height: 100px;
+    }
+}
+
+.restaurant {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 18px;
+    flex: 1;
+
+    .nomRestaurant {
+        font-weight: bolder;
+        padding: 3px;
+    }
+
+    .lieuRestaurant {
+        font-weight: lighter;
+        padding: 3px;
+    }
+}
+
+.vignettesRestos {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    padding: 0 20px;
+
+    @include media-desktop {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 1200px;
+        margin: 30px auto 0 auto;
+    }
+}
+
+.heartVignette {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+
+    @include media-desktop {
+        font-size: 3vh;
+    }
+
+    i {
+        transition: all 1500ms;
+        color: map-get($colors, gradient);
+
+        &:hover {
+            cursor: pointer;
+            font-weight: 900;
+            color: map-get($colors, gradient);
+        }
+    }
+}

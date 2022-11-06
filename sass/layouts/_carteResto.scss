@@ -1,0 +1,10 @@
+.infosRestaurant {
+    width: 100%;
+    background: map-get($backgrounds, normallightgrey);
+
+    img {
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}

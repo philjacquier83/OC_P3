@@ -1,0 +1,62 @@
+.liste-etapes {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+    padding: 0 20px 0 25px;
+
+    @include media-desktop {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.fct-etape {
+    background: map-get($backgrounds, normallightgrey);
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: 20px;
+    @include shadows(button-shadow);
+
+    @include media-desktop {
+        padding: 20px 40px;
+    }
+
+    div {
+        float: left;
+        margin-right: -10px;
+    }
+
+    &:hover {
+        background: lighten(map-get($colors, primary), 35%);
+        cursor: pointer;
+        color: map-get($colors, primary);
+        font-weight: bolder;
+
+        i {
+            color: darken(map-get($colors, primary), 10%);
+        }
+    }
+}
+
+.no-etape {
+    background: map-get($colors, primary);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    position: relative;
+    left: -30px;
+    font-size: 12px;
+
+    @include media-desktop {
+        margin-left: -10px;
+        left: 50%;
+        margin-top: -10px;
+        top: -100%;
+    }
+}

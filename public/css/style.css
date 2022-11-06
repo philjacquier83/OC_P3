@@ -1,4 +1,6 @@
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -9,14 +11,6 @@ body {
 a {
   color: black;
   text-decoration: none;
-}
-
-.logo {
-  display: flex;
-  flex: 1;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
 }
 
 .presentation {
@@ -91,6 +85,9 @@ a {
 }
 .fct-etape:hover {
   background: #f2eafb;
+  cursor: pointer;
+  color: #9356DC;
+  font-weight: bolder;
 }
 .fct-etape:hover i {
   color: #782cd3;
@@ -100,7 +97,7 @@ a {
   background: #9356DC;
   width: 20px;
   height: 20px;
-  border-radius: 10px;
+  border-radius: 50%;
   padding: 0;
   margin: 0;
   display: flex;
@@ -240,18 +237,17 @@ i:hover {
 }
 @media screen and (min-width: 1024px) {
   .heartVignette {
-    font-size: 5vh;
+    font-size: 3vh;
   }
 }
 .heartVignette i {
-  display: inline-block;
-  transition: all 200ms;
-  background-color: none;
+  transition: all 1500ms;
+  color: -webkit-linear-gradient(top, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
 }
 .heartVignette i:hover {
-  display: inline-block;
   cursor: pointer;
-  background-color: -webkit-linear-gradient(top, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
+  font-weight: 900;
+  color: -webkit-linear-gradient(top, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
 }
 
 .infosRestaurant {
@@ -310,12 +306,14 @@ i:hover {
     max-width: 1200px;
     margin: 0 auto;
   }
-}
-.listePlats .entrees, .listePlats .plats, .listePlats .desserts {
-  width: 32%;
-  background-color: rgb(245, 245, 245);
-  padding: 20px 8px;
-  border-radius: 10px;
+  .listePlats .entrees,
+.listePlats .plats,
+.listePlats .desserts {
+    width: 32%;
+    background-color: rgb(245, 245, 245);
+    padding: 20px 8px;
+    border-radius: 10px;
+  }
 }
 
 .menus {
@@ -385,6 +383,14 @@ i:hover {
     max-width: 1200px;
     margin: 0 auto;
   }
+}
+.blocNom-Coeur i {
+  transition: all 400ms;
+}
+.blocNom-Coeur i:hover {
+  cursor: pointer;
+  font-weight: 900;
+  color: #5dd1b5;
 }
 
 .titreFooter {

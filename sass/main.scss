@@ -3,8 +3,16 @@
 @import "./utils/mixins";
 @import "./base/norms";
 @import "./components/buttons";
+@import "./components/logo";
+@import "./components/menus";
+@import "./components/vignettes";
+@import "./components/etapes";
+@import "./components/fontAwesome";
 @import "./layouts/header";
 @import "./layouts/nav";
+@import "./layouts/fonctionnement";
+@import "./layouts/carteResto";
+@import "./layouts/restaurants";
 @import "./layouts/container";
-@import "./layouts/form";
 @import "./layouts/footer";
+@import "./pages/slogan";

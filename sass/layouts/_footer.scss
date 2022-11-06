@@ -4,14 +4,14 @@ footer {
     background: map-get($backgrounds, lightblack);
     color: map-get($colors, white);
     padding: 30px;
-    
+
     nav {
         @include media-desktop {
             display: flex;
             justify-content: space-between;
             width: 100%;
             max-width: 1200px;
-            margin:auto;
+            margin: auto;
         }
     }
 
@@ -19,6 +19,7 @@ footer {
         padding: 0;
         margin-top: 0;
         margin-bottom: 20px;
+
         @include media-desktop {
             width: 100%;
             max-width: 1200px;
@@ -29,6 +30,7 @@ footer {
     div {
         padding: 5px 0;
         opacity: 0.4;
+
         &:hover {
             opacity: 1;
             cursor: pointer;
@@ -43,4 +45,11 @@ footer {
         width: 20px;
         margin-right: 10px;
     }
+}
+
+.titreFooter {
+    font-family: map-get($fonts, titre);
+    color: map-get($colors, white);
+    font-style: italic;
+    font-size: 20px;
 }
