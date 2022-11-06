@@ -98,10 +98,15 @@
     }
 
     i {
+        color: map-get($colors, gradient);
+        transition: all 1500ms;
+    }
+
+    &:hover {
         transition: all 1500ms;
         color: map-get($colors, gradient);
 
-        &:hover {
+        i {
             cursor: pointer;
             font-weight: 900;
             color: map-get($colors, gradient);

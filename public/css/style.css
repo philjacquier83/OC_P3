@@ -13,151 +13,280 @@ a {
   text-decoration: none;
 }
 
-.presentation {
+.btnBack,
+.btnNext {
   display: flex;
-  flex-direction: column;
-  background: rgb(248, 248, 248);
-  padding: 60px 20px;
-  text-align: center;
-  font-family: "Roboto";
-}
-
-.titrePresentation {
-  font-family: "Roboto";
-  font-weight: bolder;
-  margin: 0 0 20px 0;
+  justify-content: center;
+  width: 40px;
+  height: 100%;
+  align-items: center;
   font-size: 24px;
 }
-
-.sloganPresentation {
-  font-size: 16px;
-  font-weight: 300;
-  margin: 0 0 30px 0;
+@media screen and (min-width: 1024px) {
+  .btnBack,
+.btnNext {
+    font-size: 4vh;
+  }
 }
 
-.fonctionnement {
+.buttonPresentation {
+  font-weight: 400;
+}
+
+.buttonCommand {
   display: flex;
-  flex-direction: column;
-  padding: 60px 0;
-  background: #fff;
+  justify-content: center;
 }
 @media screen and (min-width: 1024px) {
-  .fonctionnement {
+  .buttonCommand {
+    margin-top: 60px;
+  }
+}
+.buttonCommand input[type=button] {
+  border-radius: 20px;
+  border: none;
+  padding: 15px 60px;
+  background: -webkit-linear-gradient(top, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
+  color: #fff;
+  font-family: "Roboto";
+  box-shadow: 2px 2px 8px #481a7f;
+  transition: all 800ms;
+}
+.buttonCommand input[type=button]:hover {
+  background: #4acbab;
+  box-shadow: 2px 2px 8px #32b091;
+  cursor: pointer;
+}
+
+input[type=button] {
+  border-radius: 20px;
+  border: none;
+  padding: 15px 20px;
+  background: -webkit-linear-gradient(top, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
+  color: #fff;
+  font-family: "Roboto";
+  box-shadow: 2px 2px 8px #481a7f;
+}
+
+.logo {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.menuRestaurant {
+  padding: 20px 15px;
+  border-radius: 40px 40px 0 0;
+  position: relative;
+  top: -60px;
+  background: rgb(245, 245, 245);
+}
+.menuRestaurant .nomRestaurant {
+  font-family: "Shrikhand";
+  display: flex;
+  flex: 1;
+  font-size: 24px;
+}
+@media screen and (min-width: 1024px) {
+  .menuRestaurant .nomRestaurant {
+    font-size: 5vh;
+  }
+}
+
+.bgRestaurant {
+  height: 240px;
+}
+@media screen and (min-width: 1024px) {
+  .bgRestaurant {
+    height: 360px;
+  }
+}
+.bgRestaurant img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.listePlats {
+  padding: 0;
+  margin: 0;
+}
+@media screen and (min-width: 1024px) {
+  .listePlats {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto;
   }
-}
-.fonctionnement .titreFonctionnement {
-  font-size: 24px;
-  font-weight: 700;
-  padding: 0 20px 0 15px;
-  margin-top: 0;
-}
-
-.liste-etapes {
-  display: flex;
-  flex-direction: column;
-  margin-top: 0;
-  padding: 0 20px 0 25px;
-}
-@media screen and (min-width: 1024px) {
-  .liste-etapes {
-    flex-direction: row;
-    justify-content: space-between;
+  .listePlats .entrees,
+.listePlats .plats,
+.listePlats .desserts {
+    width: 32%;
+    background-color: rgb(245, 245, 245);
+    padding: 20px 8px;
+    border-radius: 10px;
   }
 }
 
-.fct-etape {
-  background: rgb(245, 245, 245);
-  padding: 20px;
-  border-radius: 20px;
+.liste_menus {
+  background: #fff;
+  border-radius: 10px;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
   margin-top: 20px;
   box-shadow: 2px 2px 8px #9f9f9f;
 }
 @media screen and (min-width: 1024px) {
-  .fct-etape {
-    padding: 20px 40px;
+  .liste_menus {
+    text-align: left;
   }
 }
-.fct-etape div {
-  float: left;
-  margin-right: -10px;
+.liste_menus .blocChoixMenu {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 100%;
+  flex: 1;
+  padding: 10px;
+  transition-timing-function: ease-in-out;
+  transition: all 600ms;
 }
-.fct-etape:hover {
-  background: #f2eafb;
-  cursor: pointer;
-  color: #9356DC;
+.liste_menus .blocChoixMenu .nomPlat {
+  flex: 1;
+  padding: 5px 0;
+  font-weight: bolder;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.liste_menus .blocChoixMenu .desc_prix_plat {
+  display: flex;
+}
+.liste_menus .blocChoixMenu .desc_prix_plat .descPlat {
+  flex: 1;
+  margin-right: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.liste_menus .blocChoixMenu .desc_prix_plat .prixPlat {
   font-weight: bolder;
 }
-.fct-etape:hover i {
-  color: #782cd3;
-}
-
-.no-etape {
-  background: #9356DC;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  padding: 0;
-  margin: 0;
+.liste_menus .blocChoixMenuSelection {
+  width: 20%;
+  background-color: #99E2D0;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #fff;
+  text-align: center;
   position: relative;
-  left: -30px;
-  font-size: 12px;
+  right: 0%;
+  font-size: 20px;
+  color: #fff;
+  transform-origin: right;
+  transform: translateX(100%);
+  transition-timing-function: ease-in-out;
+  transition: all 600ms;
+  border-radius: 0 10px 10px 0;
 }
 @media screen and (min-width: 1024px) {
-  .no-etape {
-    margin-left: -10px;
-    left: 50%;
-    margin-top: -10px;
-    top: -100%;
+  .liste_menus .blocChoixMenuSelection {
+    font-size: 2vh;
+  }
+}
+.liste_menus .blocChoixMenuSelection i {
+  padding: 0;
+  opacity: 0;
+  transform: rotate(-270deg);
+  transition-delay: 350ms;
+  transition-duration: 250ms;
+  margin: 0;
+}
+.liste_menus .nomPlat {
+  flex: 1;
+  padding: 5px 0;
+  font-weight: bolder;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.liste_menus .desc_prix_plat {
+  display: flex;
+}
+.liste_menus .desc_prix_plat .descPlat {
+  flex: 1;
+  margin-right: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.liste_menus .desc_prix_plat .prixPlat {
+  font-weight: bolder;
+}
+.liste_menus:hover {
+  cursor: pointer;
+}
+.liste_menus:hover .blocChoixMenu {
+  width: 80%;
+  min-width: 80%;
+}
+.liste_menus:hover .blocChoixMenuSelection {
+  transform: translateX(0%);
+}
+.liste_menus:hover .blocChoixMenuSelection i {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transform: rotate(0deg);
+}
+
+.menus {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 1024px) {
+  .menus {
+    margin: 0;
+    font-size: 2vh;
+    text-align: center;
   }
 }
 
-i {
-  margin-right: 15px;
-}
-i:hover {
-  color: #9356DC;
-}
-
-.restaurants {
+.blocNom-Coeur {
   display: flex;
-  flex-direction: column;
-  padding: 60px 0;
-  background: rgb(248, 248, 248);
-}
-.restaurants .titreRestaurants {
-  font-size: 24px;
-  font-weight: 700;
-  margin-top: 0;
-  padding: 0 20px 0 15px;
 }
 @media screen and (min-width: 1024px) {
-  .restaurants .titreRestaurants {
-    width: 100%;
+  .blocNom-Coeur {
     max-width: 1200px;
     margin: 0 auto;
   }
 }
+.blocNom-Coeur i {
+  transition: all 400ms;
+}
+.blocNom-Coeur i:hover {
+  cursor: pointer;
+  font-weight: 900;
+  color: #5dd1b5;
+}
 
-.vignettesRestos {
-  display: flex;
-  flex-direction: column;
-  margin-top: 10px;
-  padding: 0 20px;
+.separator {
+  height: 3px;
+  width: 40px;
+  margin-top: 5px;
+  background: #99E2D0;
 }
 @media screen and (min-width: 1024px) {
-  .vignettesRestos {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 1200px;
-    margin: 30px auto 0 auto;
+  .separator {
+    margin: 0 auto;
   }
 }
 
@@ -229,6 +358,23 @@ i:hover {
   padding: 3px;
 }
 
+.vignettesRestos {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  padding: 0 20px;
+}
+@media screen and (min-width: 1024px) {
+  .vignettesRestos {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 30px auto 0 auto;
+  }
+}
+
 .heartVignette {
   display: flex;
   justify-content: center;
@@ -241,217 +387,86 @@ i:hover {
   }
 }
 .heartVignette i {
+  color: -webkit-linear-gradient(top, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
+  transition: all 1500ms;
+}
+.heartVignette:hover {
   transition: all 1500ms;
   color: -webkit-linear-gradient(top, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
 }
-.heartVignette i:hover {
+.heartVignette:hover i {
   cursor: pointer;
   font-weight: 900;
   color: -webkit-linear-gradient(top, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
 }
 
-.infosRestaurant {
-  width: 100%;
-  background: rgb(245, 245, 245);
-}
-.infosRestaurant img {
-  width: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-.menuRestaurant {
-  padding: 20px 15px;
-  border-radius: 40px 40px 0 0;
-  position: relative;
-  top: -60px;
-  background: rgb(245, 245, 245);
-}
-.menuRestaurant .nomRestaurant {
-  font-family: "Shrikhand";
+.liste-etapes {
   display: flex;
-  flex: 1;
-  font-size: 24px;
+  flex-direction: column;
+  margin-top: 0;
+  padding: 0 20px 0 25px;
 }
 @media screen and (min-width: 1024px) {
-  .menuRestaurant .nomRestaurant {
-    font-size: 5vh;
-  }
-}
-
-.bgRestaurant {
-  height: 240px;
-}
-@media screen and (min-width: 1024px) {
-  .bgRestaurant {
-    height: 360px;
-  }
-}
-.bgRestaurant img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-.listePlats {
-  padding: 0;
-  margin: 0;
-}
-@media screen and (min-width: 1024px) {
-  .listePlats {
-    display: flex;
-    flex-wrap: nowrap;
+  .liste-etapes {
+    flex-direction: row;
     justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  .listePlats .entrees,
-.listePlats .plats,
-.listePlats .desserts {
-    width: 32%;
-    background-color: rgb(245, 245, 245);
-    padding: 20px 8px;
-    border-radius: 10px;
   }
 }
 
-.menus {
-  display: flex;
-  flex-direction: column;
-  margin-top: 20px;
-  margin-bottom: 40px;
-}
-@media screen and (min-width: 1024px) {
-  .menus {
-    margin: 0;
-    font-size: 2vh;
-    text-align: center;
-  }
-}
-
-.liste_menus {
-  background: #fff;
-  border-radius: 10px;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
+.fct-etape {
+  background: rgb(245, 245, 245);
+  padding: 20px;
+  border-radius: 20px;
   margin-top: 20px;
   box-shadow: 2px 2px 8px #9f9f9f;
 }
 @media screen and (min-width: 1024px) {
-  .liste_menus {
-    text-align: left;
+  .fct-etape {
+    padding: 20px 40px;
   }
 }
-.liste_menus .nomPlat {
-  flex: 1;
-  padding: 5px 0;
-  font-weight: bolder;
+.fct-etape div {
+  float: left;
+  margin-right: -10px;
 }
-.liste_menus .desc_prix_plat {
-  display: flex;
-}
-.liste_menus .desc_prix_plat .descPlat {
-  flex: 1;
-  margin-right: 20px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.liste_menus .desc_prix_plat .prixPlat {
-  font-weight: bolder;
-}
-
-.separator {
-  height: 3px;
-  width: 40px;
-  margin-top: 5px;
-  background: #99E2D0;
-}
-@media screen and (min-width: 1024px) {
-  .separator {
-    margin: 0 auto;
-  }
-}
-
-.blocNom-Coeur {
-  display: flex;
-}
-@media screen and (min-width: 1024px) {
-  .blocNom-Coeur {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-}
-.blocNom-Coeur i {
-  transition: all 400ms;
-}
-.blocNom-Coeur i:hover {
+.fct-etape:hover {
+  background: #f2eafb;
   cursor: pointer;
-  font-weight: 900;
-  color: #5dd1b5;
-}
-
-.titreFooter {
-  font-family: "Shrikhand";
-  color: #fff;
-  font-style: italic;
-  font-size: 20px;
-}
-
-.btnBack,
-.btnNext {
-  display: flex;
-  justify-content: center;
-  width: 40px;
-  height: 100%;
-  align-items: center;
-  font-size: 24px;
-}
-@media screen and (min-width: 1024px) {
-  .btnBack,
-.btnNext {
-    font-size: 4vh;
-  }
-}
-
-.buttonPresentation {
-  font-weight: 400;
-}
-
-.buttonCommand {
-  display: flex;
-  justify-content: center;
-}
-@media screen and (min-width: 1024px) {
-  .buttonCommand {
-    margin-top: 60px;
-  }
-}
-.buttonCommand input[type=button] {
-  border-radius: 20px;
-  border: none;
-  padding: 15px 60px;
-  background: -webkit-linear-gradient(top, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
-  color: #fff;
-  font-family: "Roboto";
-  box-shadow: 2px 2px 8px #481a7f;
-  transition: all 400ms;
-}
-.buttonCommand input[type=button]:hover {
-  background: #e4d5f6;
   color: #9356DC;
 }
+.fct-etape:hover i {
+  color: #782cd3;
+}
 
-input[type=button] {
-  border-radius: 20px;
-  border: none;
-  padding: 15px 20px;
-  background: -webkit-linear-gradient(top, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
+.no-etape {
+  background: #9356DC;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #fff;
-  font-family: "Roboto";
-  box-shadow: 2px 2px 8px #481a7f;
+  position: relative;
+  left: -30px;
+  font-size: 12px;
+}
+@media screen and (min-width: 1024px) {
+  .no-etape {
+    margin-left: -10px;
+    left: 50%;
+    margin-top: -10px;
+    top: -100%;
+  }
+}
+
+i {
+  margin-right: 15px;
+}
+i:hover {
+  color: #9356DC;
 }
 
 header {
@@ -478,6 +493,55 @@ main nav {
   justify-content: center;
   padding: 20px;
   font-size: 18px;
+}
+
+.fonctionnement {
+  display: flex;
+  flex-direction: column;
+  padding: 60px 0;
+  background: #fff;
+}
+@media screen and (min-width: 1024px) {
+  .fonctionnement {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+.fonctionnement .titreFonctionnement {
+  font-size: 24px;
+  font-weight: 700;
+  padding: 0 20px 0 15px;
+  margin-top: 0;
+}
+
+.infosRestaurant {
+  width: 100%;
+  background: rgb(245, 245, 245);
+}
+.infosRestaurant img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.restaurants {
+  display: flex;
+  flex-direction: column;
+  padding: 60px 0;
+  background: rgb(248, 248, 248);
+}
+.restaurants .titreRestaurants {
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 0;
+  padding: 0 20px 0 15px;
+}
+@media screen and (min-width: 1024px) {
+  .restaurants .titreRestaurants {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 }
 
 footer {
@@ -522,6 +586,35 @@ footer a {
 footer .fa-solid {
   width: 20px;
   margin-right: 10px;
+}
+
+.titreFooter {
+  font-family: "Shrikhand";
+  color: #fff;
+  font-style: italic;
+  font-size: 20px;
+}
+
+.presentation {
+  display: flex;
+  flex-direction: column;
+  background: rgb(248, 248, 248);
+  padding: 60px 20px;
+  text-align: center;
+  font-family: "Roboto";
+}
+
+.titrePresentation {
+  font-family: "Roboto";
+  font-weight: bolder;
+  margin: 0 0 20px 0;
+  font-size: 24px;
+}
+
+.sloganPresentation {
+  font-size: 16px;
+  font-weight: 300;
+  margin: 0 0 30px 0;
 }
 
 /*# sourceMappingURL=style.css.map */

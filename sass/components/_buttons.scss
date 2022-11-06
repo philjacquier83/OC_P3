@@ -6,8 +6,9 @@
     height: 100%;
     align-items: center;
     font-size: 24px;
+
     @include media-desktop {
-        font-size:4vh;
+        font-size: 4vh;
     }
 }
 
@@ -18,19 +19,23 @@
 .buttonCommand {
     display: flex;
     justify-content: center;
+
     @include media-desktop {
         margin-top: 60px;
     }
+
     input[type=button] {
         border-radius: 20px;
         border: none;
         padding: 15px 60px;
         @include btns(active);
         @include shadows(primary-shadow);
-        transition: all 400ms;
+        transition: all 800ms;
+
         &:hover {
-            background: lighten(map-get($colors, primary), 30%);
-            color: map-get($colors, primary);
+            background: darken(map-get($colors, tertiary), 20%);
+            @include shadows(tertiary-shadow);
+            cursor: pointer;
         }
     }
 }
