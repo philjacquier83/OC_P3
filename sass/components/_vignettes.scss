@@ -8,7 +8,7 @@
     transform: scale(0.98);
     transition: all 400ms;
 
-    @include media-desktop {
+    @include media-tablet {
         width: 45%;
         height: 300px;
         margin-bottom: 60px;
@@ -23,7 +23,7 @@
     .imgVignette {
         height: 140px;
 
-        @include media-desktop {
+        @include media-tablet {
             height: 200px;
         }
     }
@@ -49,7 +49,7 @@
         font-weight: bolder;
         @include shadows(nav-shadow);
 
-        @include media-desktop {
+        @include media-tablet {
             width: 25%;
             float: none;
             left: 70%;
@@ -89,7 +89,7 @@
     padding: 10px;
     height: 80px;
 
-    @include media-desktop {
+    @include media-tablet {
         height: 100px;
     }
 }
@@ -118,7 +118,7 @@
     margin-top: 10px;
     padding: 0 20px;
 
-    @include media-desktop {
+    @include media-tablet {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -134,7 +134,7 @@
     align-items: center;
     font-size: 24px;
 
-    @include media-desktop {
+    @include media-tablet {
         font-size: 3vh;
     }
 

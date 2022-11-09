@@ -67,7 +67,7 @@
 
     @include media-desktop {
         text-align: left;
-        font-size: 1.75vh;
+        font-size: 2vh;
     }
 
     .blocChoixMenu {
@@ -100,7 +100,7 @@
                 overflow: hidden;
                 text-overflow: ellipsis;
                 @include media-desktop {
-                    font-size:1.5vh;
+                    font-size:1.75vh;
                 }
             }
 
@@ -171,6 +171,19 @@
         .blocChoixMenu {
             width: 80%;
             min-width: 80%;
+
+            @include media-sm-tablet {
+                width: 85%;
+                min-width: 85%;
+            }
+            @include media-tablet {
+                width:90%;
+                min-width:90%;
+            }
+            @include media-desktop {
+                width:80%;
+                min-width:80%;
+            }
         }
 
         .blocChoixMenuSelection {

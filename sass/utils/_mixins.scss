@@ -1,3 +1,9 @@
+@mixin media-sm-tablet {
+    @media screen and (min-width: map-get($breakpoints, sm-tablet)) {
+        @content;
+    }
+}
+
 @mixin media-tablet {
     @media screen and (min-width: map-get($breakpoints, tablet)) {
         @content;

@@ -31,12 +31,30 @@ a {
   height: 100%;
   align-items: center;
   font-size: 24px;
+  opacity: 0.8;
+  transition: opacity 400ms;
+}
+@media screen and (min-width: 512px) {
+  .btnBack,
+.btnNext {
+    font-size: 5.5vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .btnBack,
+.btnNext {
+    font-size: 4vw;
+  }
 }
 @media screen and (min-width: 1024px) {
   .btnBack,
 .btnNext {
-    font-size: 3.5vh;
+    font-size: 4vh;
   }
+}
+.btnBack:hover,
+.btnNext:hover {
+  opacity: 1;
 }
 
 .buttonPresentation {
@@ -78,6 +96,14 @@ input[type=button] {
   color: #fff;
   font-family: "Roboto";
   box-shadow: 2px 2px 8px #481a7f;
+  opacity: 0.7;
+  transform: scale(0.98);
+  transition: all 400ms;
+}
+input[type=button]:hover {
+  opacity: 1;
+  transform: scale(1);
+  cursor: pointer;
 }
 
 .logo {
@@ -158,7 +184,7 @@ input[type=button] {
 @media screen and (min-width: 1024px) {
   .listeMenus {
     text-align: left;
-    font-size: 1.75vh;
+    font-size: 2vh;
   }
 }
 .listeMenus .blocChoixMenu {
@@ -191,7 +217,7 @@ input[type=button] {
 }
 @media screen and (min-width: 1024px) {
   .listeMenus .blocChoixMenu .descPrixPlat .descPlat {
-    font-size: 1.5vh;
+    font-size: 1.75vh;
   }
 }
 .listeMenus .blocChoixMenu .descPrixPlat .prixPlat {
@@ -254,6 +280,24 @@ input[type=button] {
 .listeMenus:hover .blocChoixMenu {
   width: 80%;
   min-width: 80%;
+}
+@media screen and (min-width: 512px) {
+  .listeMenus:hover .blocChoixMenu {
+    width: 85%;
+    min-width: 85%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .listeMenus:hover .blocChoixMenu {
+    width: 90%;
+    min-width: 90%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .listeMenus:hover .blocChoixMenu {
+    width: 80%;
+    min-width: 80%;
+  }
 }
 .listeMenus:hover .blocChoixMenuSelection {
   transform: translateX(0);
@@ -321,7 +365,7 @@ input[type=button] {
   transition: all 400ms;
   box-shadow: 2px 2px 8px #9f9f9f;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .vignette {
     width: 45%;
     height: 300px;
@@ -334,7 +378,7 @@ input[type=button] {
 .vignette .imgVignette {
   height: 140px;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .vignette .imgVignette {
     height: 200px;
   }
@@ -359,7 +403,7 @@ input[type=button] {
   font-weight: bolder;
   box-shadow: 0 4px 2px #303030;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .vignette .nouveau {
     width: 25%;
     float: none;
@@ -395,7 +439,7 @@ input[type=button] {
   padding: 10px;
   height: 80px;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .descVignette {
     height: 100px;
   }
@@ -423,7 +467,7 @@ input[type=button] {
   margin-top: 10px;
   padding: 0 20px;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .vignettesRestos {
     flex-direction: row;
     flex-wrap: wrap;
@@ -440,7 +484,7 @@ input[type=button] {
   align-items: center;
   font-size: 24px;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .heartVignette {
     font-size: 3vh;
   }
