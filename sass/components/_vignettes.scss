@@ -3,6 +3,10 @@
     height: 220px;
     border-radius: 20px;
     margin-bottom: 30px;
+    opacity: 0.8;
+    z-index:1;
+    transform: scale(0.98);
+    transition: all 400ms;
 
     @include media-desktop {
         width: 45%;
@@ -32,13 +36,50 @@
         border-radius: 20px 20px 0 0;
     }
 
+    .nouveau {
+        width: 25%;
+        padding: 10px 0;
+        border-radius: 5px;
+        text-align: center;
+        position: relative;
+        top: -90%;
+        left: 70%;
+        background-color: map-get($colors, tertiary);
+        color: darken(map-get($colors, tertiary), 40%);
+        font-weight: bolder;
+        @include shadows(nav-shadow);
+
+        @include media-desktop {
+            width: 25%;
+            float: none;
+            left: 70%;
+        }
+    }
+
     &:hover {
+        transform: scale(1);
+        cursor: pointer;
+        &::after {
+            opacity: 1;
+        }
+
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
         background: lighten(map-get($colors, primary), 30%);
+        opacity: 0;
+        border-radius: 20px;
+        z-index: -1;
+        transform: scale(1);
         @include shadows(primary-shadow);
 
-        .descVignette {
-            color: map-get($colors, primary);
-        }
+        transition: opacity 400ms;
     }
 }
 
@@ -82,7 +123,7 @@
         flex-wrap: wrap;
         justify-content: space-between;
         width: 100%;
-        max-width: 1200px;
+        max-width: 1280px;
         margin: 30px auto 0 auto;
     }
 }
@@ -105,7 +146,6 @@
     &:hover {
         transition: all 1500ms;
         color: map-get($colors, gradient);
-
         i {
             cursor: pointer;
             font-weight: 900;

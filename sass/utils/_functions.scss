@@ -1,0 +1,10 @@
+@keyframes spinner {
+    0%, 99% {
+        opacity:0.95;
+        display: block;
+    }
+    100% {
+        opacity:0;
+        display: none;
+    }
+}

@@ -1,3 +1,13 @@
+@keyframes spinner {
+  0%, 99% {
+    opacity: 0.95;
+    display: block;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -25,7 +35,7 @@ a {
 @media screen and (min-width: 1024px) {
   .btnBack,
 .btnNext {
-    font-size: 4vh;
+    font-size: 3.5vh;
   }
 }
 
@@ -50,11 +60,13 @@ a {
   color: #fff;
   font-family: "Roboto";
   box-shadow: 2px 2px 8px #481a7f;
-  transition: all 800ms;
+  opacity: 0.7;
+  transform: scale(0.98);
+  transition: all 400ms;
 }
 .buttonCommand input[type=button]:hover {
-  background: #4acbab;
-  box-shadow: 2px 2px 8px #32b091;
+  opacity: 1;
+  transform: scale(1);
   cursor: pointer;
 }
 
@@ -119,20 +131,21 @@ input[type=button] {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
-    max-width: 1200px;
+    max-width: 1280px;
     margin: 0 auto;
+    padding: 0 20px;
   }
   .listePlats .entrees,
 .listePlats .plats,
 .listePlats .desserts {
-    width: 32%;
+    width: 30%;
     background-color: rgb(245, 245, 245);
-    padding: 20px 8px;
+    padding: 20px 0;
     border-radius: 10px;
   }
 }
 
-.liste_menus {
+.listeMenus {
   background: #fff;
   border-radius: 10px;
   padding: 0;
@@ -143,11 +156,12 @@ input[type=button] {
   box-shadow: 2px 2px 8px #9f9f9f;
 }
 @media screen and (min-width: 1024px) {
-  .liste_menus {
+  .listeMenus {
     text-align: left;
+    font-size: 1.75vh;
   }
 }
-.liste_menus .blocChoixMenu {
+.listeMenus .blocChoixMenu {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -155,9 +169,9 @@ input[type=button] {
   flex: 1;
   padding: 10px;
   transition-timing-function: ease-in-out;
-  transition: all 600ms;
+  transition: all 800ms;
 }
-.liste_menus .blocChoixMenu .nomPlat {
+.listeMenus .blocChoixMenu .nomPlat {
   flex: 1;
   padding: 5px 0;
   font-weight: bolder;
@@ -165,20 +179,25 @@ input[type=button] {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.liste_menus .blocChoixMenu .desc_prix_plat {
+.listeMenus .blocChoixMenu .descPrixPlat {
   display: flex;
 }
-.liste_menus .blocChoixMenu .desc_prix_plat .descPlat {
+.listeMenus .blocChoixMenu .descPrixPlat .descPlat {
   flex: 1;
   margin-right: 20px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.liste_menus .blocChoixMenu .desc_prix_plat .prixPlat {
+@media screen and (min-width: 1024px) {
+  .listeMenus .blocChoixMenu .descPrixPlat .descPlat {
+    font-size: 1.5vh;
+  }
+}
+.listeMenus .blocChoixMenu .descPrixPlat .prixPlat {
   font-weight: bolder;
 }
-.liste_menus .blocChoixMenuSelection {
+.listeMenus .blocChoixMenuSelection {
   width: 20%;
   background-color: #99E2D0;
   display: flex;
@@ -192,23 +211,23 @@ input[type=button] {
   transform-origin: right;
   transform: translateX(100%);
   transition-timing-function: ease-in-out;
-  transition: all 600ms;
+  transition: all 800ms;
   border-radius: 0 10px 10px 0;
 }
 @media screen and (min-width: 1024px) {
-  .liste_menus .blocChoixMenuSelection {
+  .listeMenus .blocChoixMenuSelection {
     font-size: 2vh;
   }
 }
-.liste_menus .blocChoixMenuSelection i {
+.listeMenus .blocChoixMenuSelection i {
   padding: 0;
-  opacity: 0;
+  opacity: 1;
   transform: rotate(-270deg);
-  transition-delay: 350ms;
-  transition-duration: 250ms;
+  transition-delay: 200ms;
+  transition-duration: 600ms;
   margin: 0;
 }
-.liste_menus .nomPlat {
+.listeMenus .nomPlat {
   flex: 1;
   padding: 5px 0;
   font-weight: bolder;
@@ -216,30 +235,30 @@ input[type=button] {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.liste_menus .desc_prix_plat {
+.listeMenus .descPrixPlat {
   display: flex;
 }
-.liste_menus .desc_prix_plat .descPlat {
+.listeMenus .descPrixPlat .descPlat {
   flex: 1;
   margin-right: 20px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.liste_menus .desc_prix_plat .prixPlat {
+.listeMenus .descPrixPlat .prixPlat {
   font-weight: bolder;
 }
-.liste_menus:hover {
+.listeMenus:hover {
   cursor: pointer;
 }
-.liste_menus:hover .blocChoixMenu {
+.listeMenus:hover .blocChoixMenu {
   width: 80%;
   min-width: 80%;
 }
-.liste_menus:hover .blocChoixMenuSelection {
-  transform: translateX(0%);
+.listeMenus:hover .blocChoixMenuSelection {
+  transform: translateX(0);
 }
-.liste_menus:hover .blocChoixMenuSelection i {
+.listeMenus:hover .blocChoixMenuSelection i {
   padding: 0;
   margin: 0;
   opacity: 1;
@@ -260,19 +279,20 @@ input[type=button] {
   }
 }
 
-.blocNom-Coeur {
+.blocNomCoeur {
   display: flex;
 }
 @media screen and (min-width: 1024px) {
-  .blocNom-Coeur {
-    max-width: 1200px;
+  .blocNomCoeur {
+    max-width: 1280px;
+    padding: 0 20px;
     margin: 0 auto;
   }
 }
-.blocNom-Coeur i {
+.blocNomCoeur i {
   transition: all 400ms;
 }
-.blocNom-Coeur i:hover {
+.blocNomCoeur i:hover {
   cursor: pointer;
   font-weight: 900;
   color: #5dd1b5;
@@ -295,6 +315,10 @@ input[type=button] {
   height: 220px;
   border-radius: 20px;
   margin-bottom: 30px;
+  opacity: 0.8;
+  z-index: 1;
+  transform: scale(0.98);
+  transition: all 400ms;
   box-shadow: 2px 2px 8px #9f9f9f;
 }
 @media screen and (min-width: 1024px) {
@@ -322,12 +346,47 @@ input[type=button] {
   object-position: center;
   border-radius: 20px 20px 0 0;
 }
-.vignette:hover {
-  background: #e4d5f6;
-  box-shadow: 2px 2px 8px #481a7f;
+.vignette .nouveau {
+  width: 25%;
+  padding: 10px 0;
+  border-radius: 5px;
+  text-align: center;
+  position: relative;
+  top: -90%;
+  left: 70%;
+  background-color: #99E2D0;
+  color: #278870;
+  font-weight: bolder;
+  box-shadow: 0 4px 2px #303030;
 }
-.vignette:hover .descVignette {
-  color: #9356DC;
+@media screen and (min-width: 1024px) {
+  .vignette .nouveau {
+    width: 25%;
+    float: none;
+    left: 70%;
+  }
+}
+.vignette:hover {
+  transform: scale(1);
+  cursor: pointer;
+}
+.vignette:hover::after {
+  opacity: 1;
+}
+.vignette::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #e4d5f6;
+  opacity: 0;
+  border-radius: 20px;
+  z-index: -1;
+  transform: scale(1);
+  box-shadow: 2px 2px 8px #481a7f;
+  transition: opacity 400ms;
 }
 
 .descVignette {
@@ -370,7 +429,7 @@ input[type=button] {
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1280px;
     margin: 30px auto 0 auto;
   }
 }
@@ -400,20 +459,21 @@ input[type=button] {
   color: -webkit-linear-gradient(top, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
 }
 
-.liste-etapes {
+.listeEtapes {
   display: flex;
   flex-direction: column;
   margin-top: 0;
   padding: 0 20px 0 25px;
 }
 @media screen and (min-width: 1024px) {
-  .liste-etapes {
+  .listeEtapes {
     flex-direction: row;
     justify-content: space-between;
+    padding: 0 20px;
   }
 }
 
-.fct-etape {
+.fctEtape {
   background: rgb(245, 245, 245);
   padding: 20px;
   border-radius: 20px;
@@ -421,24 +481,22 @@ input[type=button] {
   box-shadow: 2px 2px 8px #9f9f9f;
 }
 @media screen and (min-width: 1024px) {
-  .fct-etape {
+  .fctEtape {
     padding: 20px 40px;
   }
 }
-.fct-etape div {
+.fctEtape div {
   float: left;
   margin-right: -10px;
 }
-.fct-etape:hover {
+.fctEtape:hover {
   background: #f2eafb;
-  cursor: pointer;
-  color: #9356DC;
 }
-.fct-etape:hover i {
+.fctEtape:hover i {
   color: #782cd3;
 }
 
-.no-etape {
+.noEtape {
   background: #9356DC;
   width: 20px;
   height: 20px;
@@ -454,7 +512,7 @@ input[type=button] {
   font-size: 12px;
 }
 @media screen and (min-width: 1024px) {
-  .no-etape {
+  .noEtape {
     margin-left: -10px;
     left: 50%;
     margin-top: -10px;
@@ -503,7 +561,7 @@ main nav {
 }
 @media screen and (min-width: 1024px) {
   .fonctionnement {
-    max-width: 1200px;
+    max-width: 1280px;
     margin: 0 auto;
   }
 }
@@ -533,13 +591,12 @@ main nav {
 .restaurants .titreRestaurants {
   font-size: 24px;
   font-weight: 700;
-  margin-top: 0;
   padding: 0 20px 0 15px;
 }
 @media screen and (min-width: 1024px) {
   .restaurants .titreRestaurants {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1280px;
     margin: 0 auto;
   }
 }
@@ -615,6 +672,22 @@ footer .fa-solid {
   font-size: 16px;
   font-weight: 300;
   margin: 0 0 30px 0;
+}
+
+.spinner {
+  background: white;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: block;
+  margin: auto auto;
+  animation: spinner 2000ms;
 }
 
 /*# sourceMappingURL=style.css.map */
