@@ -6,8 +6,7 @@
     height: 100%;
     align-items: center;
     font-size: 24px;
-    opacity:0.8;
-    transition: opacity 400ms;
+    transition: transform 400ms ease-in-out;
 
     @include media-sm-tablet {
         font-size: 5.5vw;
@@ -21,8 +20,25 @@
         font-size: 4vh;
     }
 
+    i {
+        color: black;
+        transition: background-image 500ms;
+    }
+
     &:hover {
-        opacity:1;
+
+        transform: rotate(1turn);
+
+        i {
+            cursor: pointer;
+            background: map-get($colors, gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-weight: 900;
+            transition: all 1500ms;
+
+        }
     }
 }
 
@@ -44,12 +60,12 @@
         padding: 15px 60px;
         @include btns(active);
         @include shadows(primary-shadow);
-        opacity:0.7;
+        opacity: 0.7;
         transform: scale(0.98);
         transition: all 400ms;
 
         &:hover {
-            opacity:1;
+            opacity: 1;
             transform: scale(1);
             cursor: pointer;
         }
@@ -62,12 +78,12 @@ input[type=button] {
     padding: 15px 20px;
     @include btns(active);
     @include shadows(primary-shadow);
-    opacity:0.7;
+    opacity: 0.7;
     transform: scale(0.98);
     transition: all 400ms;
 
     &:hover {
-        opacity:1;
+        opacity: 1;
         transform: scale(1);
         cursor: pointer;
     }

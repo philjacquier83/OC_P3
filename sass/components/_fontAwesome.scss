@@ -1,8 +1,0 @@
-i {
-    margin-right: 15px;
-    color: map-get($colors, inactive_btn);
-
-    &:hover {
-        color: map-get($colors, primary);
-    }
-}

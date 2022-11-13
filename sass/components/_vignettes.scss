@@ -128,37 +128,3 @@
         margin: 30px auto 0 auto;
     }
 }
-
-.heartVignette {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
-
-    @include media-tablet {
-        font-size: 3vh;
-    }
-
-    i {
-        transition: all 1500ms;
-        font-weight: normal;
-        color: black;
-        transition: background-image 100ms 1400ms;
-        //transition: color 100ms 1400ms;
-    }
-
-    &:hover {
-
-
-        i {
-            cursor: pointer;
-            background: map-get($colors, gradient);
-            --webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            font-weight: 900;
-            transition: all 1500ms;
-
-        }
-    }
-}

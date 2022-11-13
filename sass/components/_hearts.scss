@@ -1,0 +1,55 @@
+
+
+.heartVignette {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+
+    @include media-tablet {
+        font-size: 3vh;
+    }
+
+    i {
+        margin-right: 15px;
+        transition: all 1500ms;
+        font-weight: normal;
+        color: black;
+        transition: background-image 100ms 1400ms;
+    }
+
+    &:hover {
+
+
+        i {
+            cursor: pointer;
+            background: map-get($colors, gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-weight: 900;
+            transition: all 1500ms;
+
+        }
+    }
+}
+
+.blocNomCoeur {
+    display: flex;
+
+    @include media-desktop {
+        max-width: 1280px;
+        padding: 0 20px;
+        margin: 0 auto;
+    }
+
+    i {
+        transition: all 400ms;
+    }
+
+    i:hover {
+        cursor: pointer;
+        font-weight: 900;
+        color: darken(map-get($colors, tertiary), 15%);
+    }
+}

@@ -293,6 +293,10 @@
                 opacity: 1;
                 transform: rotate(0deg);
             }
+
+            &:hover {
+                color: #fff;
+            }
         }
     }
 }
@@ -309,26 +313,6 @@
         margin: 0;
         font-size: 2vh;
         text-align: center;
-    }
-}
-
-.blocNomCoeur {
-    display: flex;
-
-    @include media-desktop {
-        max-width: 1280px;
-        padding: 0 20px;
-        margin: 0 auto;
-    }
-
-    i {
-        transition: all 400ms;
-    }
-
-    i:hover {
-        cursor: pointer;
-        font-weight: 900;
-        color: darken(map-get($colors, tertiary), 15%);
     }
 }
 

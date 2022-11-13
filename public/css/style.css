@@ -59,8 +59,7 @@ h4 {
   height: 100%;
   align-items: center;
   font-size: 24px;
-  opacity: 0.8;
-  transition: opacity 400ms;
+  transition: transform 400ms ease-in-out;
 }
 @media screen and (min-width: 512px) {
   .btnBack,
@@ -80,9 +79,24 @@ h4 {
     font-size: 4vh;
   }
 }
+.btnBack i,
+.btnNext i {
+  color: black;
+  transition: background-image 500ms;
+}
 .btnBack:hover,
 .btnNext:hover {
-  opacity: 1;
+  transform: rotate(1turn);
+}
+.btnBack:hover i,
+.btnNext:hover i {
+  cursor: pointer;
+  background: -webkit-linear-gradient(top, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 900;
+  transition: all 1500ms;
 }
 
 .buttonPresentation {
@@ -421,6 +435,9 @@ input[type=button]:hover {
   opacity: 1;
   transform: rotate(0deg);
 }
+.listeMenus:hover .blocChoixMenuSelection:hover {
+  color: #fff;
+}
 
 .menus {
   display: flex;
@@ -603,6 +620,7 @@ input[type=button]:hover {
   }
 }
 .heartVignette i {
+  margin-right: 15px;
   transition: all 1500ms;
   font-weight: normal;
   color: black;
@@ -611,7 +629,7 @@ input[type=button]:hover {
 .heartVignette:hover i {
   cursor: pointer;
   background: -webkit-linear-gradient(top, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
-  --webkit-background-clip: text;
+  -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   font-weight: 900;
@@ -679,13 +697,6 @@ input[type=button]:hover {
   }
 }
 
-i {
-  margin-right: 15px;
-}
-i:hover {
-  color: #9356DC;
-}
-
 header {
   z-index: 100;
   display: flex;
@@ -729,6 +740,9 @@ main nav {
   font-weight: 700;
   padding: 0 20px 0 15px;
   margin-top: 0;
+}
+.fonctionnement i {
+  margin-right: 15px;
 }
 
 .infosRestaurant {
