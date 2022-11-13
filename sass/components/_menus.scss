@@ -309,6 +309,9 @@
     margin-top: 20px;
     margin-bottom: 40px;
 
+    h4 {
+        font-weight: normal;
+    }
     @include media-desktop {
         margin: 0;
         font-size: 2vh;

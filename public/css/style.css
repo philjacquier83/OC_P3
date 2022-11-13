@@ -48,7 +48,7 @@ a {
 }
 
 h4 {
-  font-weight: normal;
+  font-weight: bolder;
 }
 
 .btnBack,
@@ -445,31 +445,15 @@ input[type=button]:hover {
   margin-top: 20px;
   margin-bottom: 40px;
 }
+.menus h4 {
+  font-weight: normal;
+}
 @media screen and (min-width: 1024px) {
   .menus {
     margin: 0;
     font-size: 2vh;
     text-align: center;
   }
-}
-
-.blocNomCoeur {
-  display: flex;
-}
-@media screen and (min-width: 1024px) {
-  .blocNomCoeur {
-    max-width: 1280px;
-    padding: 0 20px;
-    margin: 0 auto;
-  }
-}
-.blocNomCoeur i {
-  transition: all 400ms;
-}
-.blocNomCoeur i:hover {
-  cursor: pointer;
-  font-weight: 900;
-  color: #5dd1b5;
 }
 
 .separator {
@@ -542,6 +526,7 @@ input[type=button]:hover {
 }
 .vignette:hover {
   transform: scale(1);
+  opacity: 1;
   cursor: pointer;
 }
 .vignette:hover::after {
@@ -621,10 +606,9 @@ input[type=button]:hover {
 }
 .heartVignette i {
   margin-right: 15px;
-  transition: all 1500ms;
   font-weight: normal;
   color: black;
-  transition: background-image 100ms 1400ms;
+  transition: background-image 100ms 900ms;
 }
 .heartVignette:hover i {
   cursor: pointer;
@@ -633,7 +617,32 @@ input[type=button]:hover {
   background-clip: text;
   color: transparent;
   font-weight: 900;
-  transition: all 1500ms;
+  transition: all 1000ms;
+}
+
+.blocNomCoeur {
+  display: flex;
+}
+@media screen and (min-width: 1024px) {
+  .blocNomCoeur {
+    max-width: 1280px;
+    padding: 0 20px;
+    margin: 0 auto;
+  }
+}
+.blocNomCoeur i {
+  font-weight: normal;
+  color: black;
+  transition: background-image 100ms 900ms;
+}
+.blocNomCoeur i:hover {
+  cursor: pointer;
+  background: -webkit-linear-gradient(top, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 900;
+  transition: all 1000ms;
 }
 
 .listeEtapes {
@@ -648,6 +657,9 @@ input[type=button]:hover {
     justify-content: space-between;
     padding: 0 20px;
   }
+}
+.listeEtapes h4 {
+  font-weight: normal;
 }
 
 .fctEtape {
