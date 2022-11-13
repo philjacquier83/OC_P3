@@ -36,6 +36,99 @@
     padding: 0;
     margin: 0;
 
+    .entrees {
+        .listeMenus__no1 {
+            opacity: 0;
+            animation: showMenus 1200ms ease-in-out forwards;
+        }
+
+        .listeMenus__no2 {
+            opacity: 0;
+            animation: showMenus 1200ms 200ms ease-in-out forwards;
+
+            @include media-desktop {
+                animation: showMenus 1200ms 400ms ease-in-out forwards;
+            }
+        }
+
+        .listeMenus__no3 {
+            opacity: 0;
+            animation: showMenus 1200ms 400ms ease-in-out forwards;
+
+            @include media-desktop {
+                animation: showMenus 1200ms 800ms ease-in-out forwards;
+            }
+        }
+
+        .listeMenus__no4 {
+            opacity: 0;
+            animation: showMenus 1200ms 500ms ease-in-out forwards;
+
+            @include media-desktop {
+                animation: showMenus 1200ms 1200ms ease-in-out forwards;
+            }
+        }
+    }
+
+    .plats {
+        .listeMenus__no1 {
+            opacity: 0;
+            animation: showMenus 1200ms 600ms ease-in-out forwards;
+
+            @include media-desktop {
+                animation: showMenus 1200ms ease-in-out forwards;
+            }
+        }
+
+        .listeMenus__no2 {
+            opacity: 0;
+            animation: showMenus 1200ms 800ms ease-in-out forwards;
+
+            @include media-desktop {
+                animation: showMenus 1200ms 400ms ease-in-out forwards;
+            }
+        }
+
+        .listeMenus__no3 {
+            opacity: 0;
+            animation: showMenus 1200ms 1000ms ease-in-out forwards;
+
+            @include media-desktop {
+                animation: showMenus 1200ms 800ms ease-in-out forwards;
+            }
+        }
+    }
+
+    .desserts {
+        .listeMenus__no1 {
+            opacity: 0;
+            animation: showMenus 1200ms 1200ms ease-in-out forwards;
+
+            @include media-desktop {
+                animation: showMenus 1200ms ease-in-out forwards;
+            }
+        }
+
+        .listeMenus__no2 {
+            opacity: 0;
+            animation: showMenus 1200ms 1400ms ease-in-out forwards;
+
+            @include media-desktop {
+                animation: showMenus 1200ms 400ms ease-in-out forwards;
+            }
+        }
+
+        .listeMenus__no3 {
+            opacity: 0;
+            animation: showMenus 1200ms 1600ms ease-in-out forwards;
+
+            @include media-desktop {
+                animation: showMenus 1200ms 800ms ease-in-out forwards;
+            }
+        }
+    }
+
+
     @include media-desktop {
         display: flex;
         flex-wrap: nowrap;
@@ -63,6 +156,7 @@
     flex-direction: row;
     overflow: hidden;
     margin-top: 20px;
+
     @include shadows(button-shadow);
 
     @include media-desktop {
@@ -99,8 +193,9 @@
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
+
                 @include media-desktop {
-                    font-size:1.75vh;
+                    font-size: 1.75vh;
                 }
             }
 
@@ -119,13 +214,14 @@
         text-align: center;
         position: relative;
         right: 0%;
-        font-size:20px;
+        font-size: 20px;
         color: map-get($colors, white);
         transform-origin: right;
         transform: translateX(100%);
         transition-timing-function: ease-in-out;
         transition: all 800ms;
         border-radius: 0 10px 10px 0;
+
         @include media-desktop {
             font-size: 2vh;
         }
@@ -176,13 +272,15 @@
                 width: 85%;
                 min-width: 85%;
             }
+
             @include media-tablet {
-                width:90%;
-                min-width:90%;
+                width: 90%;
+                min-width: 90%;
             }
+
             @include media-desktop {
-                width:80%;
-                min-width:80%;
+                width: 80%;
+                min-width: 80%;
             }
         }
 
@@ -192,7 +290,7 @@
             i {
                 padding: 0;
                 margin: 0;
-                opacity:1;
+                opacity: 1;
                 transform: rotate(0deg);
             }
         }

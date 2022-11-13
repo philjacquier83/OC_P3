@@ -1,11 +1,35 @@
 @keyframes spinner {
-  0%, 99% {
+  from {
     opacity: 0.95;
-    display: block;
+  }
+  98% {
+    opacity: 0.95;
+  }
+  99% {
+    opacity: 0;
+    height: 100vh;
+    width: 100vw;
+  }
+  to {
+    opacity: 0;
+    height: 0;
+    width: 0;
+  }
+}
+@keyframes showMenus {
+  0% {
+    opacity: 0;
+    transform: translateY(30%);
+  }
+  30% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0.5;
   }
   100% {
-    opacity: 0;
-    display: none;
+    opacity: 1;
+    transform: translateY(0%);
   }
 }
 * {
@@ -21,6 +45,10 @@ body {
 a {
   color: black;
   text-decoration: none;
+}
+
+h4 {
+  font-weight: normal;
 }
 
 .btnBack,
@@ -151,6 +179,91 @@ input[type=button]:hover {
 .listePlats {
   padding: 0;
   margin: 0;
+}
+.listePlats .entrees .listeMenus__no1 {
+  opacity: 0;
+  animation: showMenus 1200ms ease-in-out forwards;
+}
+.listePlats .entrees .listeMenus__no2 {
+  opacity: 0;
+  animation: showMenus 1200ms 200ms ease-in-out forwards;
+}
+@media screen and (min-width: 1024px) {
+  .listePlats .entrees .listeMenus__no2 {
+    animation: showMenus 1200ms 400ms ease-in-out forwards;
+  }
+}
+.listePlats .entrees .listeMenus__no3 {
+  opacity: 0;
+  animation: showMenus 1200ms 400ms ease-in-out forwards;
+}
+@media screen and (min-width: 1024px) {
+  .listePlats .entrees .listeMenus__no3 {
+    animation: showMenus 1200ms 800ms ease-in-out forwards;
+  }
+}
+.listePlats .entrees .listeMenus__no4 {
+  opacity: 0;
+  animation: showMenus 1200ms 500ms ease-in-out forwards;
+}
+@media screen and (min-width: 1024px) {
+  .listePlats .entrees .listeMenus__no4 {
+    animation: showMenus 1200ms 1200ms ease-in-out forwards;
+  }
+}
+.listePlats .plats .listeMenus__no1 {
+  opacity: 0;
+  animation: showMenus 1200ms 600ms ease-in-out forwards;
+}
+@media screen and (min-width: 1024px) {
+  .listePlats .plats .listeMenus__no1 {
+    animation: showMenus 1200ms ease-in-out forwards;
+  }
+}
+.listePlats .plats .listeMenus__no2 {
+  opacity: 0;
+  animation: showMenus 1200ms 800ms ease-in-out forwards;
+}
+@media screen and (min-width: 1024px) {
+  .listePlats .plats .listeMenus__no2 {
+    animation: showMenus 1200ms 400ms ease-in-out forwards;
+  }
+}
+.listePlats .plats .listeMenus__no3 {
+  opacity: 0;
+  animation: showMenus 1200ms 1000ms ease-in-out forwards;
+}
+@media screen and (min-width: 1024px) {
+  .listePlats .plats .listeMenus__no3 {
+    animation: showMenus 1200ms 800ms ease-in-out forwards;
+  }
+}
+.listePlats .desserts .listeMenus__no1 {
+  opacity: 0;
+  animation: showMenus 1200ms 1200ms ease-in-out forwards;
+}
+@media screen and (min-width: 1024px) {
+  .listePlats .desserts .listeMenus__no1 {
+    animation: showMenus 1200ms ease-in-out forwards;
+  }
+}
+.listePlats .desserts .listeMenus__no2 {
+  opacity: 0;
+  animation: showMenus 1200ms 1400ms ease-in-out forwards;
+}
+@media screen and (min-width: 1024px) {
+  .listePlats .desserts .listeMenus__no2 {
+    animation: showMenus 1200ms 400ms ease-in-out forwards;
+  }
+}
+.listePlats .desserts .listeMenus__no3 {
+  opacity: 0;
+  animation: showMenus 1200ms 1600ms ease-in-out forwards;
+}
+@media screen and (min-width: 1024px) {
+  .listePlats .desserts .listeMenus__no3 {
+    animation: showMenus 1200ms 800ms ease-in-out forwards;
+  }
 }
 @media screen and (min-width: 1024px) {
   .listePlats {
@@ -490,17 +603,19 @@ input[type=button]:hover {
   }
 }
 .heartVignette i {
-  color: -webkit-linear-gradient(top, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
   transition: all 1500ms;
-}
-.heartVignette:hover {
-  transition: all 1500ms;
-  color: -webkit-linear-gradient(top, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
+  font-weight: normal;
+  color: black;
+  transition: background-image 100ms 1400ms;
 }
 .heartVignette:hover i {
   cursor: pointer;
+  background: -webkit-linear-gradient(top, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
+  --webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
   font-weight: 900;
-  color: -webkit-linear-gradient(top, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
+  transition: all 1500ms;
 }
 
 .listeEtapes {
@@ -720,18 +835,20 @@ footer .fa-solid {
 
 .spinner {
   background: white;
-  opacity: 0;
-  position: absolute;
+  opacity: 0.95;
+  position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
-  width: 100%;
-  height: 100%;
   z-index: 1;
-  display: block;
-  margin: auto auto;
-  animation: spinner 2000ms;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-name: spinner;
+  animation-duration: 2000ms;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
 }
 
 /*# sourceMappingURL=style.css.map */

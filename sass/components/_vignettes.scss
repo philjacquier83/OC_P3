@@ -4,7 +4,7 @@
     border-radius: 20px;
     margin-bottom: 30px;
     opacity: 0.8;
-    z-index:1;
+    z-index: 1;
     transform: scale(0.98);
     transition: all 400ms;
 
@@ -59,6 +59,7 @@
     &:hover {
         transform: scale(1);
         cursor: pointer;
+
         &::after {
             opacity: 1;
         }
@@ -139,17 +140,25 @@
     }
 
     i {
-        color: map-get($colors, gradient);
         transition: all 1500ms;
+        font-weight: normal;
+        color: black;
+        transition: background-image 100ms 1400ms;
+        //transition: color 100ms 1400ms;
     }
 
     &:hover {
-        transition: all 1500ms;
-        color: map-get($colors, gradient);
+
+
         i {
             cursor: pointer;
+            background: map-get($colors, gradient);
+            --webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
             font-weight: 900;
-            color: map-get($colors, gradient);
+            transition: all 1500ms;
+
         }
     }
 }
