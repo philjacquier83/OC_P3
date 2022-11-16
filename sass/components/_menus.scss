@@ -36,7 +36,7 @@
     padding: 0;
     margin: 0;
 
-    .entrees {
+    /*.entrees {
         .listeMenus__no1 {
             opacity: 0;
             animation: showMenus 1200ms ease-in-out forwards;
@@ -127,7 +127,7 @@
             }
         }
     }
-
+*/
 
     @include media-desktop {
         display: flex;
@@ -157,11 +157,26 @@
     overflow: hidden;
     margin-top: 20px;
 
+    animation: showMenus 1200ms ease-in-out both;
+
+    @for $i from 1 through 10 {
+        &--option#{$i} {
+            animation-delay: 200ms * $i;
+        }
+    }
+
     @include shadows(button-shadow);
 
     @include media-desktop {
         text-align: left;
         font-size: 2vh;
+        animation: showMenus 1200ms ease-in-out both;
+
+        @for $i from 1 through 4 {
+            &--#{$i} {
+                animation-delay: 400ms * $i;
+            }
+        }
     }
 
     .blocChoixMenu {
@@ -312,6 +327,7 @@
     h4 {
         font-weight: normal;
     }
+
     @include media-desktop {
         margin: 0;
         font-size: 2vh;

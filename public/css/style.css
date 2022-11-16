@@ -193,91 +193,98 @@ input[type=button]:hover {
 .listePlats {
   padding: 0;
   margin: 0;
-}
-.listePlats .entrees .listeMenus__no1 {
-  opacity: 0;
-  animation: showMenus 1200ms ease-in-out forwards;
-}
-.listePlats .entrees .listeMenus__no2 {
-  opacity: 0;
-  animation: showMenus 1200ms 200ms ease-in-out forwards;
-}
-@media screen and (min-width: 1024px) {
-  .listePlats .entrees .listeMenus__no2 {
-    animation: showMenus 1200ms 400ms ease-in-out forwards;
-  }
-}
-.listePlats .entrees .listeMenus__no3 {
-  opacity: 0;
-  animation: showMenus 1200ms 400ms ease-in-out forwards;
-}
-@media screen and (min-width: 1024px) {
-  .listePlats .entrees .listeMenus__no3 {
-    animation: showMenus 1200ms 800ms ease-in-out forwards;
-  }
-}
-.listePlats .entrees .listeMenus__no4 {
-  opacity: 0;
-  animation: showMenus 1200ms 500ms ease-in-out forwards;
-}
-@media screen and (min-width: 1024px) {
-  .listePlats .entrees .listeMenus__no4 {
-    animation: showMenus 1200ms 1200ms ease-in-out forwards;
-  }
-}
-.listePlats .plats .listeMenus__no1 {
-  opacity: 0;
-  animation: showMenus 1200ms 600ms ease-in-out forwards;
-}
-@media screen and (min-width: 1024px) {
-  .listePlats .plats .listeMenus__no1 {
-    animation: showMenus 1200ms ease-in-out forwards;
-  }
-}
-.listePlats .plats .listeMenus__no2 {
-  opacity: 0;
-  animation: showMenus 1200ms 800ms ease-in-out forwards;
-}
-@media screen and (min-width: 1024px) {
-  .listePlats .plats .listeMenus__no2 {
-    animation: showMenus 1200ms 400ms ease-in-out forwards;
-  }
-}
-.listePlats .plats .listeMenus__no3 {
-  opacity: 0;
-  animation: showMenus 1200ms 1000ms ease-in-out forwards;
-}
-@media screen and (min-width: 1024px) {
-  .listePlats .plats .listeMenus__no3 {
-    animation: showMenus 1200ms 800ms ease-in-out forwards;
-  }
-}
-.listePlats .desserts .listeMenus__no1 {
-  opacity: 0;
-  animation: showMenus 1200ms 1200ms ease-in-out forwards;
-}
-@media screen and (min-width: 1024px) {
-  .listePlats .desserts .listeMenus__no1 {
-    animation: showMenus 1200ms ease-in-out forwards;
-  }
-}
-.listePlats .desserts .listeMenus__no2 {
-  opacity: 0;
-  animation: showMenus 1200ms 1400ms ease-in-out forwards;
-}
-@media screen and (min-width: 1024px) {
-  .listePlats .desserts .listeMenus__no2 {
-    animation: showMenus 1200ms 400ms ease-in-out forwards;
-  }
-}
-.listePlats .desserts .listeMenus__no3 {
-  opacity: 0;
-  animation: showMenus 1200ms 1600ms ease-in-out forwards;
-}
-@media screen and (min-width: 1024px) {
-  .listePlats .desserts .listeMenus__no3 {
-    animation: showMenus 1200ms 800ms ease-in-out forwards;
-  }
+  /*.entrees {
+          .listeMenus__no1 {
+              opacity: 0;
+              animation: showMenus 1200ms ease-in-out forwards;
+          }
+
+          .listeMenus__no2 {
+              opacity: 0;
+              animation: showMenus 1200ms 200ms ease-in-out forwards;
+
+              @include media-desktop {
+                  animation: showMenus 1200ms 400ms ease-in-out forwards;
+              }
+          }
+
+          .listeMenus__no3 {
+              opacity: 0;
+              animation: showMenus 1200ms 400ms ease-in-out forwards;
+
+              @include media-desktop {
+                  animation: showMenus 1200ms 800ms ease-in-out forwards;
+              }
+          }
+
+          .listeMenus__no4 {
+              opacity: 0;
+              animation: showMenus 1200ms 500ms ease-in-out forwards;
+
+              @include media-desktop {
+                  animation: showMenus 1200ms 1200ms ease-in-out forwards;
+              }
+          }
+      }
+
+      .plats {
+          .listeMenus__no1 {
+              opacity: 0;
+              animation: showMenus 1200ms 600ms ease-in-out forwards;
+
+              @include media-desktop {
+                  animation: showMenus 1200ms ease-in-out forwards;
+              }
+          }
+
+          .listeMenus__no2 {
+              opacity: 0;
+              animation: showMenus 1200ms 800ms ease-in-out forwards;
+
+              @include media-desktop {
+                  animation: showMenus 1200ms 400ms ease-in-out forwards;
+              }
+          }
+
+          .listeMenus__no3 {
+              opacity: 0;
+              animation: showMenus 1200ms 1000ms ease-in-out forwards;
+
+              @include media-desktop {
+                  animation: showMenus 1200ms 800ms ease-in-out forwards;
+              }
+          }
+      }
+
+      .desserts {
+          .listeMenus__no1 {
+              opacity: 0;
+              animation: showMenus 1200ms 1200ms ease-in-out forwards;
+
+              @include media-desktop {
+                  animation: showMenus 1200ms ease-in-out forwards;
+              }
+          }
+
+          .listeMenus__no2 {
+              opacity: 0;
+              animation: showMenus 1200ms 1400ms ease-in-out forwards;
+
+              @include media-desktop {
+                  animation: showMenus 1200ms 400ms ease-in-out forwards;
+              }
+          }
+
+          .listeMenus__no3 {
+              opacity: 0;
+              animation: showMenus 1200ms 1600ms ease-in-out forwards;
+
+              @include media-desktop {
+                  animation: showMenus 1200ms 800ms ease-in-out forwards;
+              }
+          }
+      }
+  */
 }
 @media screen and (min-width: 1024px) {
   .listePlats {
@@ -306,12 +313,56 @@ input[type=button]:hover {
   flex-direction: row;
   overflow: hidden;
   margin-top: 20px;
+  animation: showMenus 1200ms ease-in-out both;
   box-shadow: 2px 2px 8px #9f9f9f;
+}
+.listeMenus--option1 {
+  animation-delay: 200ms;
+}
+.listeMenus--option2 {
+  animation-delay: 400ms;
+}
+.listeMenus--option3 {
+  animation-delay: 600ms;
+}
+.listeMenus--option4 {
+  animation-delay: 800ms;
+}
+.listeMenus--option5 {
+  animation-delay: 1000ms;
+}
+.listeMenus--option6 {
+  animation-delay: 1200ms;
+}
+.listeMenus--option7 {
+  animation-delay: 1400ms;
+}
+.listeMenus--option8 {
+  animation-delay: 1600ms;
+}
+.listeMenus--option9 {
+  animation-delay: 1800ms;
+}
+.listeMenus--option10 {
+  animation-delay: 2000ms;
 }
 @media screen and (min-width: 1024px) {
   .listeMenus {
     text-align: left;
     font-size: 2vh;
+    animation: showMenus 1200ms ease-in-out both;
+  }
+  .listeMenus--1 {
+    animation-delay: 400ms;
+  }
+  .listeMenus--2 {
+    animation-delay: 800ms;
+  }
+  .listeMenus--3 {
+    animation-delay: 1200ms;
+  }
+  .listeMenus--4 {
+    animation-delay: 1600ms;
   }
 }
 .listeMenus .blocChoixMenu {
@@ -721,11 +772,11 @@ header img {
   max-width: 400px;
 }
 
-main {
+.mainContainer {
   width: 100%;
 }
 
-main nav {
+.mainContainer nav {
   font-family: "Roboto";
   font-weight: 700;
   background: rgb(230, 230, 230);
@@ -733,6 +784,9 @@ main nav {
   justify-content: center;
   padding: 20px;
   font-size: 18px;
+}
+.mainContainer nav i {
+  margin-right: 15px;
 }
 
 .fonctionnement {

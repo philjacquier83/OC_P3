@@ -1,13 +1,18 @@
-main {
+.mainContainer {
     width: 100%;
 }
 
-main nav {
-    font-family: map-get($fonts, textes);
-    font-weight: 700;
-    background: map-get($backgrounds, darkergrey);
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-    font-size: 18px;
+.mainContainer {
+    nav {
+        font-family: map-get($fonts, textes);
+        font-weight: 700;
+        background: map-get($backgrounds, darkergrey);
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+        font-size: 18px;
+        i {
+            margin-right: 15px;
+        }
+    }
 }
