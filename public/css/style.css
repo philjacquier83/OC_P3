@@ -193,98 +193,6 @@ input[type=button]:hover {
 .listePlats {
   padding: 0;
   margin: 0;
-  /*.entrees {
-          .listeMenus__no1 {
-              opacity: 0;
-              animation: showMenus 1200ms ease-in-out forwards;
-          }
-
-          .listeMenus__no2 {
-              opacity: 0;
-              animation: showMenus 1200ms 200ms ease-in-out forwards;
-
-              @include media-desktop {
-                  animation: showMenus 1200ms 400ms ease-in-out forwards;
-              }
-          }
-
-          .listeMenus__no3 {
-              opacity: 0;
-              animation: showMenus 1200ms 400ms ease-in-out forwards;
-
-              @include media-desktop {
-                  animation: showMenus 1200ms 800ms ease-in-out forwards;
-              }
-          }
-
-          .listeMenus__no4 {
-              opacity: 0;
-              animation: showMenus 1200ms 500ms ease-in-out forwards;
-
-              @include media-desktop {
-                  animation: showMenus 1200ms 1200ms ease-in-out forwards;
-              }
-          }
-      }
-
-      .plats {
-          .listeMenus__no1 {
-              opacity: 0;
-              animation: showMenus 1200ms 600ms ease-in-out forwards;
-
-              @include media-desktop {
-                  animation: showMenus 1200ms ease-in-out forwards;
-              }
-          }
-
-          .listeMenus__no2 {
-              opacity: 0;
-              animation: showMenus 1200ms 800ms ease-in-out forwards;
-
-              @include media-desktop {
-                  animation: showMenus 1200ms 400ms ease-in-out forwards;
-              }
-          }
-
-          .listeMenus__no3 {
-              opacity: 0;
-              animation: showMenus 1200ms 1000ms ease-in-out forwards;
-
-              @include media-desktop {
-                  animation: showMenus 1200ms 800ms ease-in-out forwards;
-              }
-          }
-      }
-
-      .desserts {
-          .listeMenus__no1 {
-              opacity: 0;
-              animation: showMenus 1200ms 1200ms ease-in-out forwards;
-
-              @include media-desktop {
-                  animation: showMenus 1200ms ease-in-out forwards;
-              }
-          }
-
-          .listeMenus__no2 {
-              opacity: 0;
-              animation: showMenus 1200ms 1400ms ease-in-out forwards;
-
-              @include media-desktop {
-                  animation: showMenus 1200ms 400ms ease-in-out forwards;
-              }
-          }
-
-          .listeMenus__no3 {
-              opacity: 0;
-              animation: showMenus 1200ms 1600ms ease-in-out forwards;
-
-              @include media-desktop {
-                  animation: showMenus 1200ms 800ms ease-in-out forwards;
-              }
-          }
-      }
-  */
 }
 @media screen and (min-width: 1024px) {
   .listePlats {
@@ -295,13 +203,26 @@ input[type=button]:hover {
     margin: 0 auto;
     padding: 0 20px;
   }
-  .listePlats .entrees,
-.listePlats .plats,
-.listePlats .desserts {
+  .listePlats .entrees {
     width: 30%;
     background-color: rgb(245, 245, 245);
     padding: 20px 0;
     border-radius: 10px;
+    animation: showMenus 1200ms ease-in-out both;
+  }
+  .listePlats .plats {
+    width: 30%;
+    background-color: rgb(245, 245, 245);
+    padding: 20px 0;
+    border-radius: 10px;
+    animation: showMenus 1200ms 400ms ease-in-out both;
+  }
+  .listePlats .desserts {
+    width: 30%;
+    background-color: rgb(245, 245, 245);
+    padding: 20px 0;
+    border-radius: 10px;
+    animation: showMenus 1200ms 800ms ease-in-out both;
   }
 }
 
@@ -350,19 +271,6 @@ input[type=button]:hover {
   .listeMenus {
     text-align: left;
     font-size: 2vh;
-    animation: showMenus 1200ms ease-in-out both;
-  }
-  .listeMenus--1 {
-    animation-delay: 400ms;
-  }
-  .listeMenus--2 {
-    animation-delay: 800ms;
-  }
-  .listeMenus--3 {
-    animation-delay: 1200ms;
-  }
-  .listeMenus--4 {
-    animation-delay: 1600ms;
   }
 }
 .listeMenus .blocChoixMenu {
@@ -378,6 +286,9 @@ input[type=button]:hover {
 .listeMenus .blocChoixMenu .nomPlat {
   flex: 1;
   padding: 5px 0;
+  font-weight: bolder;
+}
+.listeMenus .blocChoixMenu .nomPlat h4 {
   font-weight: bolder;
   white-space: nowrap;
   overflow: hidden;
@@ -431,29 +342,9 @@ input[type=button]:hover {
   transition-duration: 600ms;
   margin: 0;
 }
-.listeMenus .nomPlat {
-  flex: 1;
-  padding: 5px 0;
-  font-weight: bolder;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.listeMenus .descPrixPlat {
-  display: flex;
-}
-.listeMenus .descPrixPlat .descPlat {
-  flex: 1;
-  margin-right: 20px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.listeMenus .descPrixPlat .prixPlat {
-  font-weight: bolder;
-}
 .listeMenus:hover {
   cursor: pointer;
+  box-shadow: 2px 2px 4px #1b6150;
 }
 .listeMenus:hover .blocChoixMenu {
   width: 80%;

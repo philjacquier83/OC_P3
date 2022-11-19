@@ -36,99 +36,6 @@
     padding: 0;
     margin: 0;
 
-    /*.entrees {
-        .listeMenus__no1 {
-            opacity: 0;
-            animation: showMenus 1200ms ease-in-out forwards;
-        }
-
-        .listeMenus__no2 {
-            opacity: 0;
-            animation: showMenus 1200ms 200ms ease-in-out forwards;
-
-            @include media-desktop {
-                animation: showMenus 1200ms 400ms ease-in-out forwards;
-            }
-        }
-
-        .listeMenus__no3 {
-            opacity: 0;
-            animation: showMenus 1200ms 400ms ease-in-out forwards;
-
-            @include media-desktop {
-                animation: showMenus 1200ms 800ms ease-in-out forwards;
-            }
-        }
-
-        .listeMenus__no4 {
-            opacity: 0;
-            animation: showMenus 1200ms 500ms ease-in-out forwards;
-
-            @include media-desktop {
-                animation: showMenus 1200ms 1200ms ease-in-out forwards;
-            }
-        }
-    }
-
-    .plats {
-        .listeMenus__no1 {
-            opacity: 0;
-            animation: showMenus 1200ms 600ms ease-in-out forwards;
-
-            @include media-desktop {
-                animation: showMenus 1200ms ease-in-out forwards;
-            }
-        }
-
-        .listeMenus__no2 {
-            opacity: 0;
-            animation: showMenus 1200ms 800ms ease-in-out forwards;
-
-            @include media-desktop {
-                animation: showMenus 1200ms 400ms ease-in-out forwards;
-            }
-        }
-
-        .listeMenus__no3 {
-            opacity: 0;
-            animation: showMenus 1200ms 1000ms ease-in-out forwards;
-
-            @include media-desktop {
-                animation: showMenus 1200ms 800ms ease-in-out forwards;
-            }
-        }
-    }
-
-    .desserts {
-        .listeMenus__no1 {
-            opacity: 0;
-            animation: showMenus 1200ms 1200ms ease-in-out forwards;
-
-            @include media-desktop {
-                animation: showMenus 1200ms ease-in-out forwards;
-            }
-        }
-
-        .listeMenus__no2 {
-            opacity: 0;
-            animation: showMenus 1200ms 1400ms ease-in-out forwards;
-
-            @include media-desktop {
-                animation: showMenus 1200ms 400ms ease-in-out forwards;
-            }
-        }
-
-        .listeMenus__no3 {
-            opacity: 0;
-            animation: showMenus 1200ms 1600ms ease-in-out forwards;
-
-            @include media-desktop {
-                animation: showMenus 1200ms 800ms ease-in-out forwards;
-            }
-        }
-    }
-*/
-
     @include media-desktop {
         display: flex;
         flex-wrap: nowrap;
@@ -137,13 +44,28 @@
         margin: 0 auto;
         padding: 0 20px;
 
-        .entrees,
-        .plats,
+        .entrees {
+            width: 30%;
+            background-color: map-get($backgrounds, normallightgrey);
+            padding: 20px 0;
+            border-radius: 10px;
+            animation: showMenus 1200ms ease-in-out both;
+        }
+
+        .plats {
+            width: 30%;
+            background-color: map-get($backgrounds, normallightgrey);
+            padding: 20px 0;
+            border-radius: 10px;
+            animation: showMenus 1200ms 400ms ease-in-out both;
+        }
+
         .desserts {
             width: 30%;
             background-color: map-get($backgrounds, normallightgrey);
             padding: 20px 0;
             border-radius: 10px;
+            animation: showMenus 1200ms 800ms ease-in-out both;
         }
     }
 }
@@ -156,7 +78,6 @@
     flex-direction: row;
     overflow: hidden;
     margin-top: 20px;
-
     animation: showMenus 1200ms ease-in-out both;
 
     @for $i from 1 through 10 {
@@ -170,13 +91,7 @@
     @include media-desktop {
         text-align: left;
         font-size: 2vh;
-        animation: showMenus 1200ms ease-in-out both;
 
-        @for $i from 1 through 4 {
-            &--#{$i} {
-                animation-delay: 400ms * $i;
-            }
-        }
     }
 
     .blocChoixMenu {
@@ -194,9 +109,13 @@
             flex: 1;
             padding: 5px 0;
             font-weight: bolder;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
+
+            h4 {
+                font-weight: bolder;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
         }
 
         .descPrixPlat {
@@ -249,35 +168,12 @@
             transition-duration: 600ms;
             margin: 0;
         }
-    }
 
-    .nomPlat {
-        flex: 1;
-        padding: 5px 0;
-        font-weight: bolder;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
-    .descPrixPlat {
-        display: flex;
-
-        .descPlat {
-            flex: 1;
-            margin-right: 20px;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-
-        .prixPlat {
-            font-weight: bolder;
-        }
     }
 
     &:hover {
         cursor: pointer;
+        @include shadows(tertiary-shadow);
 
         .blocChoixMenu {
             width: 80%;
